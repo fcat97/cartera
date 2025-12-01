@@ -1,7 +1,5 @@
 import type {NextConfig} from 'next';
 
-const repoName = 'cartera';
-
 const nextConfig: NextConfig = {
   /* config options here */
   typescript: {
@@ -10,13 +8,9 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: 'export',
-  trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  basePath: `/${repoName}`,
-  assetPrefix: `/${repoName}/`,
 };
 
 export default nextConfig;
