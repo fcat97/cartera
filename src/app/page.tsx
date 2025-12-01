@@ -17,7 +17,6 @@ export default function Home() {
             height={400}
             className="rounded-lg mx-auto"
             priority
-            unoptimized
           />
         </div>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight">
