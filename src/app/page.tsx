@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { FileText, Shield } from 'lucide-react';
@@ -8,6 +9,16 @@ export default function Home() {
   return (
     <div className="py-8 sm:py-12">
       <section className="text-center py-12 md:py-16">
+        <div className="mb-8">
+          <Image
+            src="/banner.png"
+            alt="Cartera Banner"
+            width={1200}
+            height={400}
+            className="rounded-lg mx-auto"
+            priority
+          />
+        </div>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight">
           Welcome to Cartera
         </h1>
