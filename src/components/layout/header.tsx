@@ -14,6 +14,7 @@ export function Header() {
             width={32}
             height={32}
             className="rounded-full"
+            unoptimized
           />
           <span className="text-2xl font-bold text-primary">Cartera</span>
         </Link>
