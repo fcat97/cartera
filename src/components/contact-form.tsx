@@ -6,8 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { contactSchema, type FormState } from "@/lib/schema";
+import { contactSchema } from "@/lib/schema";
 import { Loader2 } from "lucide-react";
+
+type FormState = {
+  message: string;
+  status: 'success' | 'error' | 'idle';
+};
 
 function SubmitButton({ isSubmitting }: { isSubmitting: boolean }) {
   return (
