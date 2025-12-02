@@ -2,14 +2,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { FileText, Shield, Home } from 'lucide-react';
+import { basePath } from '../../../next.config';
+
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
 
 export function Header() {
+  const iconSrc = isGithubActions ? `${basePath}/icon.png` : "/icon.png";
+  
   return (
     <header className="bg-card shadow-sm sticky top-0 z-40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/icon.png"
+            src={iconSrc}
             alt="Cartera Logo"
             width={32}
             height={32}

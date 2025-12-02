@@ -4,6 +4,8 @@ const repoName = 'cartera';
 
 const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
 
+export const basePath = isGithubActions ? `/${repoName}` : undefined;
+
 const nextConfig: NextConfig = {
   /* config options here */
   typescript: {
@@ -13,8 +15,8 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   output: isGithubActions ? 'export' : undefined,
-  basePath: isGithubActions ? `/${repoName}`: undefined,
-  assetPrefix: isGithubActions ? `/${repoName}/` : undefined,
+  basePath: basePath,
+  assetPrefix: basePath,
   images: {
     unoptimized: true,
   },

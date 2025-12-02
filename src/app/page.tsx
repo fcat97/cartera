@@ -4,14 +4,19 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { FileText, Shield } from 'lucide-react';
 import { ContactForm } from '@/components/contact-form';
+import { basePath } from '../../../next.config';
+
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
 
 export default function Home() {
+  const bannerSrc = isGithubActions ? `${basePath}/banner.png` : "/banner.png";
+
   return (
     <div className="py-8 sm:py-12">
       <section className="text-center py-12 md:py-16">
         <div className="mb-8">
           <Image
-            src="/banner.png"
+            src={bannerSrc}
             alt="Cartera Banner"
             width={1200}
             height={400}
