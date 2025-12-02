@@ -4,12 +4,14 @@ import { Button } from '@/components/ui/button';
 import { FileText, Shield, Home } from 'lucide-react';
 
 export function Header() {
+  const iconSrc = `/icon.png`;
+  
   return (
     <header className="bg-card shadow-sm sticky top-0 z-40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/icon.png"
+            src={iconSrc}
             alt="Cartera Logo"
             width={32}
             height={32}

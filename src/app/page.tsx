@@ -6,12 +6,14 @@ import { FileText, Shield } from 'lucide-react';
 import { ContactForm } from '@/components/contact-form';
 
 export default function Home() {
+  const bannerSrc = `/banner.png`;
+
   return (
     <div className="py-8 sm:py-12">
       <section className="text-center py-12 md:py-16">
         <div className="mb-8">
           <Image
-            src="/banner.png"
+            src={bannerSrc}
             alt="Cartera Banner"
             width={1200}
             height={400}
