@@ -6,7 +6,7 @@ import { FileText, Shield } from 'lucide-react';
 import { ContactForm } from '@/components/contact-form';
 
 export default function Home() {
-  const bannerSrc = `/banner.png`;
+  const bannerSrc = `banner.png`;
 
   return (
     <div className="py-8 sm:py-12">
