@@ -1,12 +1,9 @@
 import type {NextConfig} from 'next';
 
-const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
-const repoName = 'cartera';
-
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: isGithubActions ? `/${repoName}` : '',
-  assetPrefix: isGithubActions ? `/${repoName}/` : '',
+  // The basePath and assetPrefix are configured by the GitHub Actions workflow.
+  // images.unoptimized is also set by the workflow.
   images: {
     unoptimized: true,
   },
