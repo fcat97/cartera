@@ -19,7 +19,7 @@ export function Header() {
           />
           <span className="text-2xl font-bold text-primary">Cartera</span>
         </Link>
-        <nav className="flex items-center space-x-1 sm:space-x-2">
+        <nav className="flex items-center space-x-0 sm:space-x-1">
           <Button variant="ghost" asChild>
             <Link href="/">
               <Home className="mr-0 sm:mr-2 h-4 w-4" />
