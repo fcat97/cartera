@@ -2,10 +2,6 @@ import type {NextConfig} from 'next';
 
 const repoName = 'cartera';
 
-const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
-
-export const basePath = isGithubActions ? `/${repoName}` : undefined;
-
 const nextConfig: NextConfig = {
   /* config options here */
   typescript: {
@@ -14,9 +10,9 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: isGithubActions ? 'export' : undefined,
-  basePath: basePath,
-  assetPrefix: basePath,
+  output: 'export',
+  basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}`,
   images: {
     unoptimized: true,
   },

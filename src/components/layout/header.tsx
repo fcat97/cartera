@@ -3,12 +3,8 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { FileText, Shield, Home } from 'lucide-react';
 
-const repoName = 'cartera';
-const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
-const basePath = isGithubActions ? `/${repoName}` : '';
-
 export function Header() {
-  const iconSrc = `${basePath}/icon.png`;
+  const iconSrc = `/cartera/icon.png`;
   
   return (
     <header className="bg-card shadow-sm sticky top-0 z-40">

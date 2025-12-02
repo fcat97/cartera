@@ -5,12 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { FileText, Shield } from 'lucide-react';
 import { ContactForm } from '@/components/contact-form';
 
-const repoName = 'cartera';
-const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
-const basePath = isGithubActions ? `/${repoName}` : '';
-
 export default function Home() {
-  const bannerSrc = `${basePath}/banner.png`;
+  const bannerSrc = `/cartera/banner.png`;
 
   return (
     <div className="py-8 sm:py-12">
