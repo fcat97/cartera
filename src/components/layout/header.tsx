@@ -17,24 +17,25 @@ export function Header() {
             height={32}
             className="rounded-full"
           />
-          <span className="text-2xl font-bold text-primary">Cartera</span>
+          <span className="text-2xl font-bold text-primary shrink-0">Cartera</span>
         </Link>
+        
         <nav className="flex items-center space-x-0 sm:space-x-1">
           <Button variant="ghost" asChild>
             <Link href="/">
-              <Home className="mr-0 sm:mr-2 h-4 w-4" />
+              <Home className="h-4 w-4 sm:mr-2" />
               <span className="hidden sm:inline">Home</span>
             </Link>
           </Button>
           <Button variant="ghost" asChild>
             <Link href="/privacy-policy">
-              <Shield className="mr-0 sm:mr-2 h-4 w-4" />
+              <Shield className="h-4 w-4 sm:mr-2" />
               <span className="hidden sm:inline">Privacy</span>
             </Link>
           </Button>
           <Button variant="ghost" asChild>
             <Link href="/terms-and-conditions">
-              <FileText className="mr-0 sm:mr-2 h-4 w-4" />
+              <FileText className="h-4 w-4 sm:mr-2" />
               <span className="hidden sm:inline">Terms</span>
             </Link>
           </Button>
