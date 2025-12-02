@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { FileText, Shield, Home } from 'lucide-react';
 
 export function Header() {
-  const iconSrc = `/icon.png`;
+  const iconSrc = `/cartera/icon.png`;
   
   return (
     <header className="bg-card shadow-sm sticky top-0 z-40">
