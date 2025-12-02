@@ -4,12 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { FileText, Shield } from 'lucide-react';
 import { ContactForm } from '@/components/contact-form';
-import { basePath } from '../../../next.config';
 
+const repoName = 'cartera';
 const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
+const basePath = isGithubActions ? `/${repoName}` : '';
 
 export default function Home() {
-  const bannerSrc = isGithubActions ? `${basePath}/banner.png` : "/banner.png";
+  const bannerSrc = `${basePath}/banner.png`;
 
   return (
     <div className="py-8 sm:py-12">
