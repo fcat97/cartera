@@ -6,7 +6,7 @@ import { FileText, Shield } from 'lucide-react';
 import { ContactForm } from '@/components/contact-form';
 
 export default function Home() {
-  const bannerSrc = `/cartera/banner.png`;
+  const bannerSrc = `/banner.png`;
 
   return (
     <div className="py-8 sm:py-12">
@@ -19,6 +19,7 @@ export default function Home() {
             height={400}
             className="rounded-lg mx-auto"
             priority
+            unoptimized
           />
         </div>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight">
