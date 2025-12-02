@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { FileText, Shield, Home } from 'lucide-react';
 
 export function Header() {
-  const iconSrc = `/cartera/icon.png`;
+  const iconSrc = `/icon.png`;
   
   return (
     <header className="bg-card shadow-sm sticky top-0 z-40">
@@ -16,7 +16,6 @@ export function Header() {
             width={32}
             height={32}
             className="rounded-full"
-            unoptimized
           />
           <span className="text-2xl font-bold text-primary">Cartera</span>
         </Link>

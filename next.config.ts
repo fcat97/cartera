@@ -1,7 +1,5 @@
 import type {NextConfig} from 'next';
 
-const repoName = 'cartera';
-
 const nextConfig: NextConfig = {
   /* config options here */
   typescript: {
@@ -10,11 +8,15 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: 'export',
-  basePath: `/${repoName}`,
-  assetPrefix: `/${repoName}`,
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 };
 
