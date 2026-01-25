@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
       <Card className="max-w-4xl mx-auto">
         <CardHeader>
           <CardTitle className="text-3xl font-bold text-center">Privacy Policy for Cartera</CardTitle>
-          <CardDescription className="text-center">Last Updated: October 26, 2023</CardDescription>
+          <CardDescription className="text-center">Last Updated: January 25, 2026</CardDescription>
         </CardHeader>
         <CardContent className="prose dark:prose-invert max-w-none text-foreground/80 text-base leading-relaxed px-6 sm:px-8 md:px-10">
           <div className="space-y-8">
@@ -35,6 +35,7 @@ export default function PrivacyPolicyPage() {
 
               <h3 className="text-xl font-semibold text-foreground">1.2 Transactional Data (Sync Subscription Feature)</h3>
               <p>If you purchase the optional sync subscription, we collect transactional records related to your activities inside the App. These are used solely for syncing your data across devices.</p>
+              <p><strong>End-to-End Encryption:</strong> All transactional data is encrypted on your device before transmission to our servers. The encryption keys are generated and stored exclusively on your device and are never transmitted to or stored on our servers. Data can only be decrypted on your authorized devices, ensuring that your sensitive information remains private and secure.</p>
 
               <h3 className="text-xl font-semibold text-foreground">1.3 Automatic Data (for Diagnostics & Analytics)</h3>
               <p>Through third-party services, we may automatically collect:</p>
@@ -114,7 +115,7 @@ export default function PrivacyPolicyPage() {
               </ul>
               <p>To exercise your rights, contact us at <a href="mailto:media.uqab@gmail.com" className="text-primary hover:underline">media.uqab@gmail.com</a>.</p>
             </section>
-            
+
             <section className="space-y-4">
               <h2 className="text-2xl font-semibold text-primary border-b pb-2">8. International Use</h2>
               <p>This Privacy Policy follows general global privacy standards. We do not currently claim compliance with any specific jurisdictional regulations (such as GDPR or CCPA), but we aim to follow industry best practices.</p>
