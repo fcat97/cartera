@@ -198,7 +198,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 py-6" asChild>
-              <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+              <a href="https://play.google.com/store/apps/details?id=media.uqab.cartera" target="_blank" rel="noopener noreferrer">
                 Get on Google Play
               </a>
             </Button>
