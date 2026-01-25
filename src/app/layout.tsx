@@ -6,8 +6,15 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Cartera Website',
-  description: 'Privacy Policy and Terms & Conditions for the Cartera App.',
+  title: {
+    default: 'Cartera - Expense Tracker & Budget Planner',
+    template: '%s | Cartera',
+  },
+  description: 'Take control of your finances with Cartera, the ultimate notepad-style expense tracker and budget planner. Track expenses, manage budgets, and secure your financial data.',
+  keywords: ['expense tracker', 'budget planner', 'personal finance', 'money management', 'financial app'],
+  authors: [{ name: 'UqabMedia' }],
+  creator: 'UqabMedia',
+  metadataBase: new URL('https://cartera.app'),
 };
 
 export default function RootLayout({
