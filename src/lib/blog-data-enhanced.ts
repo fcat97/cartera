@@ -42,6 +42,16 @@ export const blogPostsEnhanced: BlogPostData[] = [
     keywords: ['double-entry bookkeeping', 'accounting basics', 'financial accuracy', 'bookkeeping explained', 'personal accounting'],
     readingTime: 12,
   },
+  {
+    slug: 'best-expense-tracking-apps-2026',
+    title: 'Top 8 Best Expense Tracking Apps in 2026: Comprehensive Comparison',
+    date: '2026-02-06',
+    excerpt: 'Discover the best expense tracking apps of 2026. Compare features, pricing, and user ratings to find the perfect budget management tool for your needs.',
+    featuredImage: '/blogs/app-comparison.jpg',
+    author: 'Cartera Team',
+    keywords: ['best expense tracking app 2026', 'budget app comparison', 'expense tracker review', 'money management app', 'personal finance app', 'expense tracking software'],
+    readingTime: 18,
+  },
 ];
 
 export function getBlogPost(slug: string) {

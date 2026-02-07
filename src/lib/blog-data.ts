@@ -22,4 +22,11 @@ export const blogPosts: BlogPost[] = [
     excerpt: 'Understand the power of double-entry bookkeeping and how Cartera uses this professional accounting method to keep your finances accurate and balanced.',
     featuredImage: '/blogs/bookkeeping.jpg',
   },
+  {
+    slug: 'best-expense-tracking-apps-2026',
+    title: 'Top 8 Best Expense Tracking Apps in 2026: Comprehensive Comparison',
+    date: '2026-02-06',
+    excerpt: 'Discover the best expense tracking apps of 2026. Compare features, pricing, and user ratings to find the perfect budget management tool for your needs.',
+    featuredImage: '/blogs/app-comparison.jpg',
+  },
 ];

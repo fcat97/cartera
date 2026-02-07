@@ -51,6 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/blogs/best-expense-tracking-apps-2026`,
+      lastModified: new Date('2026-02-06'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
   ];
 
   return [...staticPages, ...blogPosts];
