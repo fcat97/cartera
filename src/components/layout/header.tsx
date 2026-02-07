@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { FileText, Shield, Home } from 'lucide-react';
+import { FileText, Shield, Home, BookText } from 'lucide-react';
 
 export function Header() {
   const iconSrc = `icon.png`;
@@ -25,6 +25,12 @@ export function Header() {
             <Link href="/">
               <Home className="h-4 w-4 sm:mr-2" />
               <span className="hidden sm:inline">Home</span>
+            </Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="/blogs">
+              <BookText className="mr-0 sm:mr-2 h-4 w-4" />
+              <span className="hidden sm:inline">Blog</span>
             </Link>
           </Button>
           <Button variant="ghost" asChild>
