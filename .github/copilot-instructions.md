@@ -105,6 +105,11 @@ Genkit is configured in `src/ai/genkit.ts` with Google Gemini 2.5 Flash as the d
 ### Images
 - Next.js Image component configured with remote patterns for `placehold.co`
 - Add new remote domains to `next.config.ts` `images.remotePatterns` array
+- **Image paths for GitHub Pages**: Use paths starting with `/` (e.g., `/blog-getting-started.jpg`, `/banner.png`)
+  - Next.js Image component automatically handles basePath injection
+  - GitHub Actions `actions/configure-pages@v5` injects `basePath: '/cartera'` during deployment
+  - Do NOT hardcode `/cartera/` prefix - Next.js handles this automatically
+  - Place all public images in `/public/` root directory (not subdirectories)
 
 ### Icons
 - Primary icon library: `lucide-react`
