@@ -10,7 +10,7 @@ const blogTitle = 'Best Expense Tracking Apps 2026: 8 Apps Compared';
 const blogExcerpt = 'Detailed comparison of the top 8 expense tracking apps for 2026, including Money Manager, Cashew, Budge, and Cartera. Find the perfect app for your budgeting needs.';
 const blogSlug = 'best-expense-tracking-apps-2026';
 const readingTime = 12;
-const featuredImage = '/blogs/app-comparison.jpg';
+const featuredImage = '/blog-app-comparison.jpg';
 
 export const metadata: Metadata = {
   title: `${blogTitle} | Cartera`,
