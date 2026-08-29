@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "media.uqab.cartera",
+      "sha256_cert_fingerprints": ["9E:09:C3:0A:4C:20:9B:CB:2C:BF:EB:2F:8F:8B:2B:FA:D0:77:65:EF:75:B0:D3:43:60:C7:48:E5:72:3D:23:A4"]
+    }
+  }
+]
