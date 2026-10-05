@@ -15,6 +15,7 @@ The draft follows the approved ivory, forest-green, and notebook visual directio
 ## Assets
 
 - public/icon.png: copied from appCartera/src/main/icon.png in the Android repository.
+- public/screenshots/{books-and-pages-light,books-and-pages-dark,monthly-transactions-dark,monthly-transactions-light,spending-analysis,monthly-budget,trip-transactions}.webp: optimized copies of the seven owner-supplied screenshots in `/home/portonics/Documents/cartera screen shot/promo-3`. These replace the single hero capture in a swipeable carousel with navigation, pause/resume, and reduced-motion support.
 - public/screenshots/analysis.webp: optimized copy of the existing /tmp/planit-analysis-overview.png capture. Its matching UI hierarchy identifies media.uqab.cartera.dev; it shows USD analysis and no names, contacts, or account identifiers. This is a development-build capture, not verification of the current Play release. The owner should approve the dataset and confirm/replace it against the releasable build before publication.
 - The notebook, budget, and savings graphics are HTML/CSS explanations, labeled as illustrative examples, rather than app screenshots.
 - public/fonts/: Google Fonts Latin subsets and original OFL license files.

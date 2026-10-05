@@ -1,9 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { ArrowDown, ArrowRight, ArrowUpRight, BookOpen, NotebookPen, Wallet, ChartNoAxesColumnIncreasing, Plane, House, BriefcaseBusiness, ShoppingBasket, CalendarDays, CircleCheck, Handshake, Users, ReceiptText, Mic, ImagePlus, Sparkles, HardDrive, LockKeyhole, Cloud, Tags, Coins, Search, Plus, Minus } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, BookOpen, NotebookPen, Wallet, ChartNoAxesColumnIncreasing, Plane, House, BriefcaseBusiness, ShoppingBasket, CalendarDays, CircleCheck, Handshake, Users, ReceiptText, Mic, ImagePlus, Sparkles, HardDrive, LockKeyhole, Cloud, Tags, Coins, Search, Plus, Minus } from 'lucide-react';
 import { PlayStoreLink } from '@/components/play-store-link';
 import { ContactForm } from '@/components/contact-form';
+import { HeroScreenshotCarousel } from '@/components/hero-screenshot-carousel';
 import { SITE_DESCRIPTION, SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -54,21 +54,7 @@ export default function Home() {
           </div>
           <p className="availability">Available for Android <span aria-hidden="true">·</span> A place for everyday money</p>
         </div>
-        <figure className="hero-visual">
-          <div className="hero-visual-backdrop" aria-hidden="true" />
-          <div className="phone-frame">
-            <Image src="/screenshots/analysis.webp" alt="Cartera’s Analysis screen showing income, expenses, net balance, transaction count, and a monthly spending trend in USD." width={720} height={1600} sizes="(max-width: 600px) 236px, (max-width: 1000px) 250px, 276px" priority />
-          </div>
-          <div className="hero-notebook" aria-hidden="true">
-            <BookOpen size={25} strokeWidth={1.4} />
-            <p>A page for<br />every part of life</p>
-            <span><House size={19} /> Home</span>
-            <span><Plane size={19} /> Trips</span>
-            <span><BriefcaseBusiness size={19} /> Projects</span>
-          </div>
-          <div className="hero-sticker" aria-hidden="true"><span>Less guessing.</span><span>More clarity.</span><ArrowDown size={19} /></div>
-          <figcaption>Transaction analysis, inside Cartera</figcaption>
-        </figure>
+        <HeroScreenshotCarousel />
       </section>
 
       <section className="how-it-works site-shell" aria-labelledby="how-title">
