@@ -96,3 +96,7 @@ Preserve /blogs, /privacy-policy, and /terms-and-conditions, or provide correct 
 The brief requires accessible heading order, sufficient contrast, visible keyboard focus, meaningful screenshot alternatives, comfortable touch targets, responsive layouts, and reduced-motion support. Keep the primary promise and download action clear on mobile.
 
 Optimize image weight and layout stability. Do not assume that the app’s source-language list proves complete translations or Arabic RTL readiness.
+
+## Development Workflow
+
+Commit the current work before making further changes, as requested by the owner. Use code-first implementation and retain Impeccable v4.3.1.

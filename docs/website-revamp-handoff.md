@@ -4,6 +4,7 @@ The draft follows the approved ivory, forest-green, and notebook visual directio
 
 ## What changed
 
+- Marketing copy describes the product’s capabilities and benefits in declarative language. Feature sections and FAQs focus on the offering; action labels remain clear.
 - Rebuilt the homepage around everyday finances, books and pages, accounts, recording and analysis, budgets, savings goals, scheduled expenses, loans, and the three shared-finance jobs.
 - Added nearby access and connectivity notes for collaboration, cloud sync, voice/images, and the assistant. External AI processing is disclosed beside the assistant story.
 - Added responsive navigation, keyboard focus and skip navigation, expandable FAQs, reduced-motion support, and contact validation.

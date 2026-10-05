@@ -44,7 +44,7 @@ export function ContactForm() {
         <textarea id="contact-message" name="message" placeholder="Questions, feedback, or a feature suggestion…" rows={4} required minLength={10} maxLength={2000} aria-describedby="contact-note contact-feedback" />
       </div>
       <button type="submit" className="play-store-link contact-submit"><Mail size={18} aria-hidden="true" /> Open email draft <ArrowUpRight size={17} aria-hidden="true" /></button>
-      <p className="form-note" id="contact-note">This form prepares a draft in your email app. Direct email: <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> directly.</p>
+      <p className="form-note" id="contact-note">This form prepares a draft in your email app. Direct email: <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.</p>
       <p id="contact-feedback" className={`form-feedback ${error ? 'form-feedback--error' : ''}`} role="status" aria-live="polite">
         {error || (draftOpened ? 'Messages are sent through your email app. If no draft opened, direct email is available at the address above.' : '')}
       </p>
