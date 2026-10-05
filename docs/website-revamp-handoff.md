@@ -47,4 +47,5 @@ The dev server runs on port 9002. The build produces a static site in out/.
 - The production build passed with all pages statically exported; lint remains skipped by the existing build configuration.
 - Browser checks covered desktop and widths 320, 375, 390, 650, 768, 900, 1024, and 1440; mobile download visibility; Google Play links and section anchors; menu close behavior; FAQ expansion; contact validation and email-draft feedback; existing routes and local assets; footer links; and reduced motion.
 - The homepage had no automated WCAG A/AA violations in axe-core checks, no browser script errors, and no failed asset requests.
+- Carousel checks covered all seven loaded images, previous/next and wraparound, direct selection, keyboard and drag navigation, autoplay, hover and manual pause/resume, offscreen pausing, and reduced-motion behavior.
 - An independent read-only review found no critical or important issues.

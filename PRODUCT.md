@@ -76,7 +76,7 @@ Preserve /blogs, /privacy-policy, and /terms-and-conditions, or provide correct 
 - docs/website-revamp-handoff.md: implementation notes, verification, asset provenance, and publication checks.
 - src/app/page.tsx: the approved website draft and product explanations.
 - public/icon.png: the actual Android app icon copied from appCartera/src/main/icon.png.
-- public/screenshots/analysis.webp: a real development-build Analysis capture without names, contacts, or account identifiers. Its dataset and correspondence to the public release still need owner approval.
+- public/screenshots/: the hero carousel uses seven owner-supplied app captures from `/home/portonics/Documents/cartera screen shot/promo-3`, optimized as WebP. The older analysis.webp development capture is retained as an asset but no longer shown in the hero. Correspondence to the current public release remains unverified.
 - docs/previews/: desktop and mobile captures of the website draft.
 - Existing blog and legal content is retained. Historical blog ratings, prices, launch language, and budget-alert claims need editorial verification.
 - No verified testimonials, review ratings, user counts, rankings, or savings statistics have been provided.

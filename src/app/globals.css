@@ -107,7 +107,7 @@
 .hero-sticker svg { margin-top: 8px; transform: rotate(15deg); }
 .hero-visual figcaption { font-size: 11px; color: var(--quiet); margin: 16px 0 0 48px; }
 
-.hero-carousel-body { width: var(--hero-phone-width); margin-left: var(--hero-phone-offset); position: relative; z-index: 4; }
+.hero-carousel-body { width: var(--hero-phone-width); margin-left: var(--hero-phone-offset); position: relative; z-index: 2; }
 .hero-carousel-body .phone-frame { width: 100%; margin-left: 0; }
 .hero-carousel-viewport { overflow: hidden; border-radius: 24px; touch-action: pan-y pinch-zoom; }
 .hero-carousel-track { display: flex; }
@@ -120,7 +120,7 @@
 .hero-carousel-count { font-size: 12px; color: var(--green); font-variant-numeric: tabular-nums; }
 .hero-carousel-dots { display: flex; justify-content: center; gap: 4px; }
 .hero-carousel-dots button { width: 24px; height: 32px; display: grid; place-items: center; border-radius: 6px; }
-.hero-carousel-dots span { width: 6px; height: 6px; background: #768d7d; border-radius: 50%; transition: width 150ms ease, background 150ms ease; }
+.hero-carousel-dots span { width: 6px; height: 6px; background: #768d7d; border-radius: 50%; transition: background 150ms ease; }
 .hero-carousel-dots button[aria-current="true"] span { width: 18px; background: var(--green); }
 .hero-visual .hero-carousel-caption { width: var(--hero-phone-width); margin: 0 0 0 var(--hero-phone-offset); text-align: center; min-height: 17px; }
 
