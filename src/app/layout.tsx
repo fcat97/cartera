@@ -6,17 +6,19 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { RedirectHandler } from '@/components/redirect-handler';
 import { Suspense } from 'react';
+import { SITE_URL, SITE_DESCRIPTION } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cartera - Expense Tracker & Budget Planner',
+    default: 'Cartera — Expense Tracker, Budgets & Shared Finances',
     template: '%s | Cartera',
   },
-  description: 'Take control of your finances with Cartera, the ultimate notepad-style expense tracker and budget planner. Track expenses, manage budgets, and secure your financial data.',
+  description: SITE_DESCRIPTION,
   keywords: ['expense tracker', 'budget planner', 'personal finance', 'money management', 'financial app'],
   authors: [{ name: 'UqabMedia' }],
   creator: 'UqabMedia',
-  metadataBase: new URL('https://cartera.app'),
+  metadataBase: new URL(SITE_URL),
+  openGraph: { siteName: 'Cartera', images: [{ url: '/social-preview.png', width: 1200, height: 630 }] },
 };
 
 export default function RootLayout({
@@ -27,16 +29,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className={cn('font-body antialiased flex flex-col min-h-screen')}>
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <Suspense fallback={null}>
           <RedirectHandler />
         </Suspense>
         <Header />
-        <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8">
+        <main id="main-content" className="site-main" tabIndex={-1}>
           {children}
         </main>
         <Footer />

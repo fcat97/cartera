@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Expert tips, guides, and insights on personal finance and expense tracking.',
   },
   alternates: {
-    canonical: 'https://cartera.app/blogs',
+    canonical: 'https://cartera.yellowbytes.dev/blogs',
   },
 };
 

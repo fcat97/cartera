@@ -11,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://cartera.app/sitemap.xml',
+    sitemap: 'https://cartera.yellowbytes.dev/sitemap.xml',
   };
 }

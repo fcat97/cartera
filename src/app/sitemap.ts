@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://cartera.app';
+  const baseUrl = 'https://cartera.yellowbytes.dev';
   
   // Static pages
   const staticPages = [

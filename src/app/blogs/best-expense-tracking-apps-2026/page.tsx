@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     authors: ['Cartera Team'],
     images: [
       {
-        url: `https://cartera.app${featuredImage}`,
+        url: `https://cartera.yellowbytes.dev${featuredImage}`,
         width: 1200,
         height: 600,
         alt: blogTitle,
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: blogTitle,
     description: blogExcerpt,
-    images: [`https://cartera.app${featuredImage}`],
+    images: [`https://cartera.yellowbytes.dev${featuredImage}`],
   },
   alternates: {
-    canonical: `https://cartera.app/blogs/${blogSlug}`,
+    canonical: `https://cartera.yellowbytes.dev/blogs/${blogSlug}`,
   },
 };
 
@@ -62,7 +62,7 @@ export default function BestExpenseTrackingApps2026() {
       name: 'Cartera',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://cartera.app/logo.png',
+        url: 'https://cartera.yellowbytes.dev/icon.png',
       },
     },
   };
@@ -75,19 +75,19 @@ export default function BestExpenseTrackingApps2026() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://cartera.app',
+        item: 'https://cartera.yellowbytes.dev',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: 'https://cartera.app/blogs',
+        item: 'https://cartera.yellowbytes.dev/blogs',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: blogTitle,
-        item: `https://cartera.app/blogs/${blogSlug}`,
+        item: `https://cartera.yellowbytes.dev/blogs/${blogSlug}`,
       },
     ],
   };

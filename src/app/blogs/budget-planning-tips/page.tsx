@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     authors: [blogPost.author],
     images: [
       {
-        url: `https://cartera.app${blogPost.featuredImage}`,
+        url: `https://cartera.yellowbytes.dev${blogPost.featuredImage}`,
         width: 1200,
         height: 600,
         alt: blogPost.title,
@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: blogPost.title,
     description: blogPost.excerpt,
-    images: [`https://cartera.app${blogPost.featuredImage}`],
+    images: [`https://cartera.yellowbytes.dev${blogPost.featuredImage}`],
   },
   alternates: {
-    canonical: `https://cartera.app/blogs/${blogPost.slug}`,
+    canonical: `https://cartera.yellowbytes.dev/blogs/${blogPost.slug}`,
   },
 };
 

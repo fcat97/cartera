@@ -1,51 +1,48 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { FileText, Shield, Home, BookText } from 'lucide-react';
+import { useRef } from 'react';
+import { Menu, X } from 'lucide-react';
+import { PlayStoreLink } from '@/components/play-store-link';
+
+const navigation = [
+  { href: '/#features', label: 'Features' },
+  { href: '/#shared-finances', label: 'Shared finances' },
+  { href: '/#faq', label: 'FAQ' },
+  { href: '/blogs', label: 'Blog' },
+];
 
 export function Header() {
-  const iconSrc = `icon.png`;
-  
+  const menu = useRef<HTMLDetailsElement>(null);
+  const closeMenu = () => menu.current?.removeAttribute('open');
   return (
-    <header className="bg-card shadow-sm sticky top-0 z-40">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <Link href="/" className="flex items-center gap-2">
-          <Image
-            src={iconSrc}
-            alt="Cartera Logo"
-            width={32}
-            height={32}
-            className="rounded-full"
-          />
-          <span className="text-2xl font-bold text-primary shrink-0">Cartera</span>
+    <header className="site-header">
+      <div className="site-shell header-inner">
+        <Link href="/" className="brand" aria-label="Cartera home" onClick={closeMenu}>
+          <Image src="/icon.png" alt="" width={44} height={44} priority />
+          <span>Cartera</span>
         </Link>
-        
-        <nav className="flex items-center space-x-0 sm:space-x-1">
-          <Button variant="ghost" asChild>
-            <Link href="/">
-              <Home className="h-4 w-4 sm:mr-2" />
-              <span className="hidden sm:inline">Home</span>
-            </Link>
-          </Button>
-          <Button variant="ghost" asChild>
-            <Link href="/blogs">
-              <BookText className="mr-0 sm:mr-2 h-4 w-4" />
-              <span className="hidden sm:inline">Blog</span>
-            </Link>
-          </Button>
-          <Button variant="ghost" asChild>
-            <Link href="/privacy-policy">
-              <Shield className="h-4 w-4 sm:mr-2" />
-              <span className="hidden sm:inline">Privacy</span>
-            </Link>
-          </Button>
-          <Button variant="ghost" asChild>
-            <Link href="/terms-and-conditions">
-              <FileText className="h-4 w-4 sm:mr-2" />
-              <span className="hidden sm:inline">Terms</span>
-            </Link>
-          </Button>
+        <nav className="desktop-navigation" aria-label="Main navigation">
+          {navigation.map(({ href, label }) => <Link key={href} href={href}>{label}</Link>)}
         </nav>
+        <div className="header-actions">
+          <PlayStoreLink compact className="header-download" />
+          <details ref={menu} className="mobile-menu" onKeyDown={(event) => {
+            if (event.key === 'Escape') { closeMenu(); menu.current?.querySelector('summary')?.focus(); }
+          }}>
+            <summary aria-label="Toggle navigation">
+              <Menu className="menu-open-icon" size={23} aria-hidden="true" />
+              <X className="menu-close-icon" size={23} aria-hidden="true" />
+            </summary>
+            <nav aria-label="Mobile navigation" className="mobile-navigation">
+              {navigation.map(({ href, label }) => <Link key={href} href={href} onClick={closeMenu}>{label}</Link>)}
+              <Link href="/#contact" onClick={closeMenu}>Contact</Link>
+              <Link href="/privacy-policy" onClick={closeMenu}>Privacy</Link>
+              <Link href="/terms-and-conditions" onClick={closeMenu}>Terms</Link>
+            </nav>
+          </details>
+        </div>
       </div>
     </header>
   );

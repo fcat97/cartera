@@ -1,267 +1,194 @@
-import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { FileText, Shield, BookOpen, Scale, Infinity, BarChart3, Calendar, Lock, HardDrive, Cloud, CheckCircle, Smartphone } from 'lucide-react';
-import { ContactForm } from '@/components/contact-form';
+import Link from 'next/link';
 import type { Metadata } from 'next';
+import { ArrowDown, ArrowRight, ArrowUpRight, BookOpen, NotebookPen, Wallet, ChartNoAxesColumnIncreasing, Plane, House, BriefcaseBusiness, ShoppingBasket, CalendarDays, CircleCheck, Handshake, Users, ReceiptText, Mic, ImagePlus, Sparkles, HardDrive, LockKeyhole, Cloud, Tags, Coins, Search, Plus, Minus } from 'lucide-react';
+import { PlayStoreLink } from '@/components/play-store-link';
+import { ContactForm } from '@/components/contact-form';
+import { SITE_DESCRIPTION, SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Cartera - Advance Notepad-Style Expense Tracker & Budget Planner',
-  description: 'Take control of your finances with Cartera, the ultimate tool for personal and business asset management. Track expenses, manage budgets, and secure your financial data with bank-level encryption.',
-  keywords: 'expense tracker, budget planner, personal finance, money management, double-entry bookkeeping, asset management, financial app, expense management, budget app, finance tracker',
+  title: { absolute: 'Cartera — Expense Tracker, Budgets & Shared Finances' },
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: SITE_URL },
   openGraph: {
-    title: 'Cartera - Advance Notepad-Style Expense Tracker & Budget Planner',
-    description: 'Combining the simplicity of a notepad with the precision of a professional accounting system. Track expenses, manage budgets, and take control of your finances.',
+    title: 'Cartera — Your money, organized for real life.',
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
     type: 'website',
-    siteName: 'Cartera',
+    images: [{ url: '/social-preview.png', width: 1200, height: 630, alt: 'Cartera — Your money, organized for real life. Available for Android.' }],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Cartera - Expense Tracker & Budget Planner',
-    description: 'Take control of your finances with Cartera. Intuitive, secure, and unlimited.',
-  },
+  twitter: { card: 'summary_large_image', title: 'Cartera — Your money, organized for real life.', description: SITE_DESCRIPTION, images: ['/social-preview.png'] },
 };
 
-const features = [
-  {
-    icon: BookOpen,
-    title: 'Unique Notepad-Style Organization',
-    description: 'Arrange your expenses exactly how you think. Create separate "pages" for different projects, trips, or months. It\'s as easy as writing in a notebook, but with the power of digital calculation.',
-    emoji: '📑',
-  },
-  {
-    icon: Scale,
-    title: 'Professional Double-Entry Tracking',
-    description: 'Experience high-level accuracy. Cartera utilizes a double-entry bookkeeping system to ensure your assets and liabilities always balance. It doesn\'t just track spending; it manages your entire financial ecosystem.',
-    emoji: '⚖️',
-  },
-  {
-    icon: Infinity,
-    title: 'Unlimited Everything (Free!)',
-    description: 'Why pay for more space? Enjoy unlimited accounts and unlimited pages. Whether you have two bank accounts or twenty, and whether you want to track one year or ten, we never cap your data.',
-    emoji: '♾️',
-  },
-  {
-    icon: BarChart3,
-    title: 'Visual Insights & Graphs',
-    description: 'Turn numbers into clarity. View your spending patterns through detailed graphs. Instantly see where your money goes and identify trends to help you save more effectively.',
-    emoji: '📊',
-  },
-  {
-    icon: Calendar,
-    title: 'Advanced Budget Planning',
-    description: 'Stay ahead of your bills. Set custom budgets for weekly, monthly, or yearly cycles. Track your progress in real-time and get notified when you\'re approaching your limits.',
-    emoji: '📅',
-  },
-  {
-    icon: Lock,
-    title: 'Bank-Level Security',
-    description: 'Your financial data is nobody\'s business but yours. Secure your records with a built-in App Lock to keep your sensitive information private.',
-    emoji: '🔒',
-  },
-  {
-    icon: HardDrive,
-    title: 'Local Backup & Restore',
-    description: 'Ownership of your data matters. Export your records and create local backups to ensure you never lose your history. Restore your data to a new device in seconds.',
-    emoji: '💾',
-  },
-  {
-    icon: Cloud,
-    title: 'Seamless Synchronization',
-    description: 'Need your data everywhere? Upgrade to our sync service to access your ledgers across multiple devices. Start tracking on your phone and review on your tablet instantly.',
-    emoji: '☁️',
-    isPro: true,
-  },
+const questions = [
+  ['What is Cartera?', 'Cartera is an Android expense tracker and money manager that brings everyday records, budgets, savings goals, loans, and shared finances together in one financial notebook.'],
+  ['How do pages and accounts fit together?', 'Accounts represent where money is held or moves: cash, a bank account, or a card. Pages organize records by context, such as a month, a trip, or a project. Books bring related pages together. Each transaction retains its account and its context.'],
+  ['What multi-currency features are included?', 'Cartera supports currency-specific records, balances, and analysis, with both sides of a currency exchange represented in account statements. Each collaboration group uses one configured currency.'],
+  ['What does Loan Management include?', 'Loan Management brings money lent, money borrowed, contact details, and related repayments into a dedicated overview. Loans can also be recorded before a contact is attached.'],
+  ['What kinds of savings goals does Cartera support?', 'Savings goals support amounts, deadlines, regular contributions, history-based emergency funds, and recurring future costs. Progress measures reflect the type of goal and the financial records available.'],
+  ['How are payments and transfers represented?', 'Transfers, savings contributions, bill payments, and group settlements are records of financial activity. Account balances reflect the amounts entered in Cartera, with related activity available in statements and history.'],
+  ['Which features are available offline?', 'Personal records use local storage. Cloud sync, AI, and group updates are online features. Collaboration also supports cached reading of previously available records.'],
+  ['What backup options are included?', 'Local backup creation and restore during setup are included in the app. Cloud synchronization between Android devices is available according to the current plan and service configuration.'],
+  ['How does the assistant work with financial records?', 'The assistant provides transaction lookups, summaries, and supported record creation or editing through chat. Messages, attachments, and relevant records are processed by external AI providers. Recognized transaction details remain editable before saving.'],
+  ['How is access to online features determined?', 'Cloud sync, collaboration, voice and image recognition, the assistant, and automatic tagging have access conditions determined by the current plan, usage allowances, and service configuration.'],
 ];
 
-const whyChoose = [
-  { title: 'No Boundaries', description: 'No limits on the number of accounts or ledgers you can create.' },
-  { title: 'Intuitive UI', description: 'If you can use a notepad, you can use this app.' },
-  { title: 'Precision', description: 'Built on real accounting principles for error-free tracking.' },
-  { title: 'Privacy First', description: "We don't sell your data; your local backups stay with you." },
+const everydayTools = [
+  { icon: Wallet, title: 'Accounts & sub-accounts', body: 'Balances, statements, and history for cash, cards, bank accounts, and mobile banking records. Sub-accounts add finer organization under a parent account.' },
+  { icon: Tags, title: 'Tags, notes & analysis', body: 'Tags and notes keep context with each record. Search, filters, trends, and breakdowns connect summary figures with the transactions behind them.' },
+  { icon: Coins, title: 'Multi-currency records', body: 'Currency-specific records and analysis, with both sides of currency exchanges reflected in balances and statements.' },
+  { icon: Handshake, title: 'Loans & repayments', body: 'Money lent and borrowed, organized by contact, with loan history and related repayments in Loan Management.' },
 ];
 
 export default function Home() {
-  const bannerSrc = `banner.png`;
-
   return (
-    <div className="py-8 sm:py-12">
-      {/* Hero Section */}
-      <section className="text-center py-12 md:py-16">
-        <div className="mb-8">
-          <Image
-            src={bannerSrc}
-            alt="Cartera - Expense Tracker and Budget Planner App Banner"
-            width={1200}
-            height={400}
-            className="rounded-lg mx-auto shadow-lg"
-            priority
-          />
+    <div className="home-page">
+      <section className="hero site-shell" aria-labelledby="hero-title">
+        <div className="hero-copy">
+          <p className="eyebrow"><span className="eyebrow-dot" /> Your everyday financial notebook</p>
+          <h1 id="hero-title">Your money,<br />organized for<br /><span className="ink-underline">real life.</span></h1>
+          <p className="hero-description">Cartera brings everyday spending, budgets, savings goals, and shared finances into one Android app. Notebook-style pages and connected accounts give every part of life its own place.</p>
+          <div className="hero-actions">
+            <PlayStoreLink />
+            <a href="#features" className="text-link">Explore the features <ArrowRight size={18} aria-hidden="true" /></a>
+          </div>
+          <p className="availability">Available for Android <span aria-hidden="true">·</span> A place for everyday money</p>
         </div>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight">
-          Cartera
-        </h1>
-        <p className="mt-2 text-xl sm:text-2xl font-semibold text-foreground/90">
-          Advance Notepad-Style Expense Tracker & Budget Planner
-        </p>
-        <p className="mt-6 max-w-3xl mx-auto text-lg text-foreground/80 leading-relaxed">
-          Take control of your finances with Cartera, the ultimate tool for personal and business asset management.
-          Combining the simplicity of a notepad with the precision of a professional accounting system,
-          Cartera makes tracking your money intuitive, secure, and limitless.
-        </p>
-        <p className="mt-4 max-w-2xl mx-auto text-md text-foreground/70">
-          Whether you are managing a household budget or tracking small business expenses,
-          our "Page & Ledger" system ensures you stay organized without the complexity of traditional finance apps.
-        </p>
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="text-lg px-8 py-6" asChild>
-            <Link href="#download">
-              <Smartphone className="mr-2 h-5 w-5" />
-              Download Now
-            </Link>
-          </Button>
-          <Button size="lg" variant="outline" className="text-lg px-8 py-6" asChild>
-            <Link href="#features">
-              Learn More
-            </Link>
-          </Button>
-        </div>
+        <figure className="hero-visual">
+          <div className="hero-visual-backdrop" aria-hidden="true" />
+          <div className="phone-frame">
+            <Image src="/screenshots/analysis.webp" alt="Cartera’s Analysis screen showing income, expenses, net balance, transaction count, and a monthly spending trend in USD." width={720} height={1600} sizes="(max-width: 600px) 236px, (max-width: 1000px) 250px, 276px" priority />
+          </div>
+          <div className="hero-notebook" aria-hidden="true">
+            <BookOpen size={25} strokeWidth={1.4} />
+            <p>A page for<br />every part of life</p>
+            <span><House size={19} /> Home</span>
+            <span><Plane size={19} /> Trips</span>
+            <span><BriefcaseBusiness size={19} /> Projects</span>
+          </div>
+          <div className="hero-sticker" aria-hidden="true"><span>Less guessing.</span><span>More clarity.</span><ArrowDown size={19} /></div>
+          <figcaption>Transaction analysis, inside Cartera</figcaption>
+        </figure>
       </section>
 
-      {/* Key Features Section */}
-      <section id="features" className="py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary">Key Features</h2>
-          <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto">
-            Everything you need to manage your finances effectively, all in one powerful app.
-          </p>
+      <section className="how-it-works site-shell" aria-labelledby="how-title">
+        <div className="section-heading">
+          <p className="eyebrow">A little structure. A lot more clarity.</p>
+          <h2 id="how-title">Everyday finances, brought together.</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
-            <Card
-              key={index}
-              className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 hover:border-primary/30"
-            >
-              <CardHeader className="pb-3">
-                <div className="flex items-center gap-3">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <feature.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <CardTitle className="text-lg flex items-center gap-2">
-                      <span>{feature.emoji}</span>
-                      {feature.title}
-                      {feature.isPro && (
-                        <span className="text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full">
-                          Pro
-                        </span>
-                      )}
-                    </CardTitle>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/70 leading-relaxed">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* Why Choose Cartera Section */}
-      <section className="py-16 bg-muted/30 rounded-2xl px-6 sm:px-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary">Why Choose Cartera?</h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {whyChoose.map((item, index) => (
-            <div key={index} className="text-center p-6">
-              <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="font-bold text-lg text-foreground mb-2">{item.title}</h3>
-              <p className="text-foreground/70 text-sm">{item.description}</p>
+        <div className="steps-grid">
+          {[
+            { icon: BookOpen, title: 'Books & pages', body: 'Notebook-style organization for months, trips, households, and projects.' },
+            { icon: NotebookPen, title: 'Transaction records', body: 'Expenses, income, transfers, currency exchanges, and loans in one place.' },
+            { icon: ChartNoAxesColumnIncreasing, title: 'Analysis & planning', body: 'Spending trends, budgets, savings goals, and scheduled expenses.' },
+          ].map(({ icon: Icon, title, body }) => (
+            <div className="step" key={title}>
+              <Icon size={38} strokeWidth={1.3} aria-hidden="true" />
+              <div><h3>{title}</h3><p>{body}</p></div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section id="download" className="py-16 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-            Stop Wondering Where Your Money Went
-          </h2>
-          <p className="text-lg text-foreground/80 mb-8">
-            Download Cartera today and start tracking your path to financial freedom!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6" asChild>
-              <a href="https://play.google.com/store/apps/details?id=media.uqab.cartera" target="_blank" rel="noopener noreferrer">
-                Get on Google Play
-              </a>
-            </Button>
+      <section id="features" className="notebook-section site-shell section-space" aria-labelledby="notebook-title">
+        <div className="notebook-illustration" role="group" aria-label="Example notebook pages for home, travel, and a freelance project">
+          <div className="book-spine"><BookOpen size={18} aria-hidden="true" /><span>The everyday book</span><span>3 pages</span></div>
+          <div className="example-pages">
+            <div className="paper-page paper-page--mint"><House size={24} strokeWidth={1.4} aria-hidden="true" /><span className="page-kicker">01 / HOME</span><h3>October<br />expenses</h3><div className="page-entry"><span>Groceries</span><span>$120</span></div><div className="page-entry"><span>Utilities</span><span>$60</span></div><div className="page-entry"><span>Lunch</span><span>$15</span></div><span className="page-total">The everyday stuff.</span></div>
+            <div className="paper-page paper-page--lilac"><Plane size={24} strokeWidth={1.4} aria-hidden="true" /><span className="page-kicker">02 / TRAVEL</span><h3>Weekend<br />away</h3><div className="page-entry"><span>Train tickets</span><span>$40</span></div><div className="page-entry"><span>Stay</span><span>$85</span></div><div className="page-entry"><span>Coffee</span><span>$4</span></div><span className="page-total">The good memories.</span></div>
+            <div className="paper-page paper-page--peach"><BriefcaseBusiness size={24} strokeWidth={1.4} aria-hidden="true" /><span className="page-kicker">03 / WORK</span><h3>Client<br />project</h3><div className="page-entry"><span>Income</span><span>$500</span></div><div className="page-entry"><span>Materials</span><span>$25</span></div><div className="page-entry"><span>Travel</span><span>$12</span></div><span className="page-total">A little side hustle.</span></div>
           </div>
+          <p className="illustration-caption">Illustrative pages and sample records</p>
+        </div>
+        <div className="feature-story">
+          <p className="eyebrow">Organized the way you think</p>
+          <h2 id="notebook-title">One life.<br />More than one page.</h2>
+          <p>Cartera’s pages give a month, a household, a trip, or a project its own space. Books bring related pages together, while connected accounts retain the financial context behind each record.</p>
+          <div className="account-page-explanation">
+            <div><Wallet size={22} aria-hidden="true" /><p><strong>Accounts tell you where.</strong><br />Cash, a bank account, a card.</p></div>
+            <div><BookOpen size={22} aria-hidden="true" /><p><strong>Pages tell you what for.</strong><br />Home, travel, work, and everything between.</p></div>
+          </div>
+          <p className="small-note">Notebook simplicity, with connected financial records underneath.</p>
         </div>
       </section>
 
-      {/* Legal Documents Section */}
-      <section className="py-12">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-foreground/90">Legal Information</h2>
-          <p className="mt-2 text-foreground/70">Your privacy and trust are important to us.</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-          <Card className="hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
-            <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <Shield className="h-6 w-6 text-primary" />
-              </div>
-              <CardTitle>Privacy Policy</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">
-                Understand how we collect, use, and protect your data.
-              </p>
-              <Button asChild>
-                <Link href="/privacy-policy">Read Policy</Link>
-              </Button>
-            </CardContent>
-          </Card>
-          <Card className="hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
-            <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <FileText className="h-6 w-6 text-primary" />
-              </div>
-              <CardTitle>Terms & Conditions</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">
-                Review the terms that govern your use of the Cartera app.
-              </p>
-              <Button asChild>
-                <Link href="/terms-and-conditions">Read Terms</Link>
-              </Button>
-            </CardContent>
-          </Card>
+      <section className="planning-section section-space" aria-labelledby="planning-title">
+        <div className="site-shell">
+          <div className="section-heading heading-with-note">
+            <div><p className="eyebrow">Budgets, goals & upcoming costs</p><h2 id="planning-title">For this month.<br />And your next milestone.</h2></div>
+            <p>Everyday spending and future goals,<br />with a clear view of progress.</p>
+          </div>
+          <div className="planning-grid">
+            <article className="planning-card">
+              <span className="feature-index">01 / SPENDING</span><h3>Budgets that fit your life</h3><p>Weekly, monthly, and yearly budgets combine overall or category limits with spending progress and remaining amounts.</p>
+              <div className="sample-panel"><div className="sample-title"><ShoppingBasket size={23} aria-hidden="true" /><span>Monthly groceries</span></div><div className="sample-amount"><span><strong>$120</strong> of $200</span><span>60%</span></div><div className="sample-progress"><span style={{ width: '60%' }} /></div><p>$80 of room left in the plan</p></div>
+            </article>
+            <article className="planning-card">
+              <span className="feature-index">02 / SAVING</span><h3>Flexible savings goals</h3><p>Savings goals support targets, deadlines, regular contributions, emergency funds, and recurring future costs.</p>
+              <div className="sample-panel sample-panel--saving"><div className="sample-title"><Plane size={23} aria-hidden="true" /><span>Weekend trip</span></div><div className="sample-amount"><span><strong>$80</strong> of $200</span><span>40%</span></div><div className="sample-progress"><span style={{ width: '40%' }} /></div><p>A little closer with every contribution</p></div>
+            </article>
+            <article className="planning-card">
+              <span className="feature-index">03 / UPCOMING</span><h3>Scheduled expenses</h3><p>Scheduled expenses include due dates, recurring periods, recorded payments, and reminders subject to device permissions.</p>
+              <div className="sample-panel"><div className="sample-title"><CalendarDays size={23} aria-hidden="true" /><span>Rent <small>Due 10 October</small></span></div><div className="sample-check"><CircleCheck size={17} aria-hidden="true" /><span>September</span><span>Recorded</span></div><div className="sample-check sample-check--pending"><span className="empty-check" aria-hidden="true" /><span>October</span><span>Upcoming</span></div></div>
+            </article>
+          </div>
+          <p className="illustration-caption">Illustrative planning examples with sample financial records.</p>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-12">
-        <div className="max-w-3xl mx-auto">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-center text-3xl">Contact Us</CardTitle>
-              <CardDescription className="text-center mt-2">
-                Have questions? Fill out the form below to get in touch.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ContactForm />
-            </CardContent>
-          </Card>
+      <section className="everyday-section site-shell section-space" aria-labelledby="everyday-title">
+        <div className="everyday-heading"><p className="eyebrow">The details, without the tangle</p><h2 id="everyday-title">From a quick note<br />to a clearer picture.</h2><p>Quick fields and prompt-style entry bring flexibility to everyday recordkeeping. Notes, tags, and analysis connect the details with the bigger picture.</p><div className="entry-options"><span><NotebookPen size={16} aria-hidden="true" /> Quick entry</span><span><Search size={16} aria-hidden="true" /> Prompt input</span></div></div>
+        <div className="everyday-tools">{everydayTools.map(({ icon: Icon, title, body }) => <article key={title}><Icon size={25} strokeWidth={1.4} aria-hidden="true" /><div><h3>{title}</h3><p>{body}</p></div></article>)}</div>
+      </section>
+
+      <section id="shared-finances" className="shared-section section-space" aria-labelledby="shared-title">
+        <div className="site-shell">
+          <div className="section-heading heading-with-note"><div><p className="eyebrow">For the money you share</p><h2 id="shared-title">Shared money.<br />A clearer record.</h2></div><p>Trips and households. Clubs and communities.<br />Dues and customer collections.</p></div>
+          <div className="shared-grid">
+            <article><Handshake size={32} strokeWidth={1.3} aria-hidden="true" /><span className="feature-index">FRIENDS & HOUSEHOLDS</span><h3>Shared costs & settlements</h3><p>Shared expenses, equal or unequal shares, and recorded settlements show who paid and how balances stand.</p><div className="shared-example">Trips <span>·</span> Roommates <span>·</span> Shared groceries</div></article>
+            <article><Users size={32} strokeWidth={1.3} aria-hidden="true" /><span className="feature-index">CLUBS & COMMUNITIES</span><h3>Shared funds</h3><p>Contributions, expenses, and balances belong to one shared fund, with member access determined by group permissions.</p><div className="shared-example">Club funds <span>·</span> Events <span>·</span> Contributions</div></article>
+            <article><ReceiptText size={32} strokeWidth={1.3} aria-hidden="true" /><span className="feature-index">ORGANIZERS & SMALL BUSINESSES</span><h3>Dues & collections</h3><p>Recurring dues, charges, recorded payments, and statements make outstanding amounts easier to follow across members or customers.</p><div className="shared-example">Membership dues <span>·</span> Rent <span>·</span> Customer balances</div></article>
+          </div>
+          <p className="shared-access-note">Online collaboration is available with eligible access. Each group has one configured currency and record visibility based on permissions. Group updates use an internet connection.</p>
+        </div>
+      </section>
+
+      <section className="ai-section site-shell section-space" aria-labelledby="ai-title">
+        <div><p className="eyebrow"><Sparkles size={15} aria-hidden="true" /> A little help along the way</p><h2 id="ai-title">An assistant for<br />everyday money.</h2><p>The Cartera assistant provides spending summaries, budget information, and record creation or editing through chat. Voice and image entry return transaction details that remain editable before saving.</p><p className="access-note">AI features require eligible access and connectivity. Messages, attachments, and relevant records are processed by external AI providers.</p></div>
+        <div className="ai-notes">
+          <p className="note-label">Chat, voice & images</p>
+          <div className="ai-prompt"><Search size={19} aria-hidden="true" /><span>Spending and budget queries</span></div>
+          <div className="ai-prompt"><Mic size={19} aria-hidden="true" /><span>Voice-based transaction entry</span></div>
+          <div className="ai-prompt"><ImagePlus size={19} aria-hidden="true" /><span>Image-based transaction recognition</span></div>
+          <p className="illustration-caption">Availability and usage allowances vary by plan.</p>
+        </div>
+      </section>
+
+      <section className="data-section site-shell" aria-labelledby="data-title">
+        <div className="section-heading"><p className="eyebrow">Your records, within reach</p><h2 id="data-title">Local records. Backup and sync.</h2></div>
+        <div className="data-grid">
+          <article><HardDrive size={27} strokeWidth={1.4} aria-hidden="true" /><h3>Local records & backups</h3><p>Personal records are stored locally, with local backup creation and restore during setup.</p></article>
+          <article><LockKeyhole size={27} strokeWidth={1.4} aria-hidden="true" /><h3>App password & automatic lock</h3><p>An app password and configurable automatic lock add privacy to financial screens on the device.</p></article>
+          <article><Cloud size={27} strokeWidth={1.4} aria-hidden="true" /><h3>Cloud sync, when available</h3><p>Cloud synchronization keeps personal records connected across Android devices, with eligible access and connectivity.</p></article>
+        </div>
+        <Link href="/privacy-policy" className="text-link">Read the privacy policy <ArrowUpRight size={16} aria-hidden="true" /></Link>
+      </section>
+
+      <section id="faq" className="faq-section site-shell section-space" aria-labelledby="faq-title">
+        <div className="faq-heading"><p className="eyebrow">Good questions</p><h2 id="faq-title">About Cartera.</h2><p>Product features, access, and everyday use.</p><a href="#contact" className="text-link">Ask us something <ArrowRight size={17} aria-hidden="true" /></a></div>
+        <div className="faq-list">{questions.map(([question, answer]) => <details className="faq-item" key={question}><summary><span>{question}</span><Plus className="faq-plus" size={19} aria-hidden="true" /><Minus className="faq-minus" size={19} aria-hidden="true" /></summary><p>{answer}</p></details>)}</div>
+      </section>
+
+      <section id="contact" className="contact-section site-shell" aria-labelledby="contact-title">
+        <div><p className="eyebrow">We’re a message away</p><h2 id="contact-title">Cartera support.</h2><p>A direct point of contact for product questions,<br />feedback, and feature suggestions.</p><span className="contact-doodle" aria-hidden="true"><NotebookPen size={76} strokeWidth={.8} /></span></div>
+        <ContactForm />
+      </section>
+
+      <section id="download" className="final-cta site-shell" aria-labelledby="download-title">
+        <div className="final-cta-inner">
+          <div><p className="eyebrow">Your next page starts here</p><h2 id="download-title">Everyday money.<br />One financial notebook.</h2><p>Cartera for Android brings records, planning, and shared finances together.</p></div>
+          <div className="final-cta-actions"><PlayStoreLink /><span>One app. Many parts of life.</span></div>
+          <BookOpen className="final-cta-book" size={200} strokeWidth={.6} aria-hidden="true" />
         </div>
       </section>
     </div>

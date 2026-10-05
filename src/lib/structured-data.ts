@@ -34,7 +34,7 @@ export function generateArticleSchema(
   keywords: string[],
   imageUrl: string
 ): ArticleStructuredData {
-  const baseUrl = 'https://cartera.app';
+  const baseUrl = 'https://cartera.yellowbytes.dev';
   
   return {
     '@context': 'https://schema.org',
@@ -80,7 +80,7 @@ export function generateBreadcrumbSchema(
   blogTitle: string,
   blogSlug: string
 ): BreadcrumbStructuredData {
-  const baseUrl = 'https://cartera.app';
+  const baseUrl = 'https://cartera.yellowbytes.dev';
   
   return {
     '@context': 'https://schema.org',
@@ -122,7 +122,7 @@ interface BlogListStructuredData {
 export function generateBlogListSchema(
   blogPosts: Array<{ slug: string; title: string }>
 ): BlogListStructuredData {
-  const baseUrl = 'https://cartera.app';
+  const baseUrl = 'https://cartera.yellowbytes.dev';
   
   return {
     '@context': 'https://schema.org',
