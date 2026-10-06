@@ -1,0 +1,516 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T01:47:33.820124+00:00",
+  "title": "Design System: Cartera",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 89.88)",
+          "oklch(26.43% 0.00000 89.88)",
+          "oklch(37.86% 0.00000 89.88)",
+          "oklch(49.29% 0.00000 89.88)",
+          "oklch(60.71% 0.00000 89.88)",
+          "oklch(72.14% 0.00000 89.88)",
+          "oklch(83.57% 0.00000 89.88)",
+          "oklch(95.00% 0.00000 89.88)"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Ink",
+        "canonical": "#173c2d",
+        "tonalRamp": [
+          "oklch(15.00% 0.05068 164.38)",
+          "oklch(26.43% 0.05068 164.38)",
+          "oklch(37.86% 0.05068 164.38)",
+          "oklch(49.29% 0.05068 164.38)",
+          "oklch(60.71% 0.05068 164.38)",
+          "oklch(72.14% 0.05068 164.38)",
+          "oklch(83.57% 0.05068 164.38)",
+          "oklch(95.00% 0.05068 164.38)"
+        ]
+      },
+      "green": {
+        "role": "primary",
+        "displayName": "Green",
+        "canonical": "#285b43",
+        "tonalRamp": [
+          "oklch(15.00% 0.06862 161.03)",
+          "oklch(26.43% 0.06862 161.03)",
+          "oklch(37.86% 0.06862 161.03)",
+          "oklch(49.29% 0.06862 161.03)",
+          "oklch(60.71% 0.06862 161.03)",
+          "oklch(72.14% 0.06862 161.03)",
+          "oklch(83.57% 0.06862 161.03)",
+          "oklch(95.00% 0.06862 161.03)"
+        ]
+      },
+      "quiet": {
+        "role": "neutral",
+        "displayName": "Quiet",
+        "canonical": "#4e635b",
+        "tonalRamp": [
+          "oklch(15.00% 0.02843 169.90)",
+          "oklch(26.43% 0.02843 169.90)",
+          "oklch(37.86% 0.02843 169.90)",
+          "oklch(49.29% 0.02843 169.90)",
+          "oklch(60.71% 0.02843 169.90)",
+          "oklch(72.14% 0.02843 169.90)",
+          "oklch(83.57% 0.02843 169.90)",
+          "oklch(95.00% 0.02843 169.90)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#dce6e0",
+        "tonalRamp": [
+          "oklch(15.00% 0.01337 159.90)",
+          "oklch(26.43% 0.01337 159.90)",
+          "oklch(37.86% 0.01337 159.90)",
+          "oklch(49.29% 0.01337 159.90)",
+          "oklch(60.71% 0.01337 159.90)",
+          "oklch(72.14% 0.01337 159.90)",
+          "oklch(83.57% 0.01337 159.90)",
+          "oklch(95.00% 0.01337 159.90)"
+        ]
+      },
+      "mint": {
+        "role": "neutral",
+        "displayName": "Mint",
+        "canonical": "#f0fcf8",
+        "tonalRamp": [
+          "oklch(15.00% 0.01366 174.18)",
+          "oklch(26.43% 0.01366 174.18)",
+          "oklch(37.86% 0.01366 174.18)",
+          "oklch(49.29% 0.01366 174.18)",
+          "oklch(60.71% 0.01366 174.18)",
+          "oklch(72.14% 0.01366 174.18)",
+          "oklch(83.57% 0.01366 174.18)",
+          "oklch(95.00% 0.01366 174.18)"
+        ]
+      },
+      "section-soft": {
+        "role": "neutral",
+        "displayName": "Warm Gray",
+        "canonical": "#f6f5f3",
+        "tonalRamp": [
+          "oklch(15.00% 0.00287 84.56)",
+          "oklch(26.43% 0.00287 84.56)",
+          "oklch(37.86% 0.00287 84.56)",
+          "oklch(49.29% 0.00287 84.56)",
+          "oklch(60.71% 0.00287 84.56)",
+          "oklch(72.14% 0.00287 84.56)",
+          "oklch(83.57% 0.00287 84.56)",
+          "oklch(95.00% 0.00287 84.56)"
+        ]
+      },
+      "lilac": {
+        "role": "neutral",
+        "displayName": "Soft Green (legacy lilac name)",
+        "canonical": "#e5f3ec",
+        "tonalRamp": [
+          "oklch(15.00% 0.01746 164.65)",
+          "oklch(26.43% 0.01746 164.65)",
+          "oklch(37.86% 0.01746 164.65)",
+          "oklch(49.29% 0.01746 164.65)",
+          "oklch(60.71% 0.01746 164.65)",
+          "oklch(72.14% 0.01746 164.65)",
+          "oklch(83.57% 0.01746 164.65)",
+          "oklch(95.00% 0.01746 164.65)"
+        ]
+      },
+      "green-hover": {
+        "role": "primary",
+        "displayName": "Green Hover",
+        "canonical": "#12382c",
+        "tonalRamp": [
+          "oklch(15.00% 0.04854 169.31)",
+          "oklch(26.43% 0.04854 169.31)",
+          "oklch(37.86% 0.04854 169.31)",
+          "oklch(49.29% 0.04854 169.31)",
+          "oklch(60.71% 0.04854 169.31)",
+          "oklch(72.14% 0.04854 169.31)",
+          "oklch(83.57% 0.04854 169.31)",
+          "oklch(95.00% 0.04854 169.31)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Focus",
+        "canonical": "#7856a3",
+        "tonalRamp": [
+          "oklch(15.00% 0.12188 302.79)",
+          "oklch(26.43% 0.12188 302.79)",
+          "oklch(37.86% 0.12188 302.79)",
+          "oklch(49.29% 0.12188 302.79)",
+          "oklch(60.71% 0.12188 302.79)",
+          "oklch(72.14% 0.12188 302.79)",
+          "oklch(83.57% 0.12188 302.79)",
+          "oklch(95.00% 0.12188 302.79)"
+        ]
+      },
+      "field-border": {
+        "role": "neutral",
+        "displayName": "Field Border",
+        "canonical": "#bdc8b9",
+        "tonalRamp": [
+          "oklch(15.00% 0.02389 137.26)",
+          "oklch(26.43% 0.02389 137.26)",
+          "oklch(37.86% 0.02389 137.26)",
+          "oklch(49.29% 0.02389 137.26)",
+          "oklch(60.71% 0.02389 137.26)",
+          "oklch(72.14% 0.02389 137.26)",
+          "oklch(83.57% 0.02389 137.26)",
+          "oklch(95.00% 0.02389 137.26)"
+        ]
+      },
+      "field-error": {
+        "role": "neutral",
+        "displayName": "Field Error",
+        "canonical": "#a42726",
+        "tonalRamp": [
+          "oklch(15.00% 0.16172 26.24)",
+          "oklch(26.43% 0.16172 26.24)",
+          "oklch(37.86% 0.16172 26.24)",
+          "oklch(49.29% 0.16172 26.24)",
+          "oklch(60.71% 0.16172 26.24)",
+          "oklch(72.14% 0.16172 26.24)",
+          "oklch(83.57% 0.16172 26.24)",
+          "oklch(95.00% 0.16172 26.24)"
+        ]
+      },
+      "field-error-bg": {
+        "role": "neutral",
+        "displayName": "Field Error Bg",
+        "canonical": "#fff8f5",
+        "tonalRamp": [
+          "oklch(15.00% 0.00852 44.89)",
+          "oklch(26.43% 0.00852 44.89)",
+          "oklch(37.86% 0.00852 44.89)",
+          "oklch(49.29% 0.00852 44.89)",
+          "oklch(60.71% 0.00852 44.89)",
+          "oklch(72.14% 0.00852 44.89)",
+          "oklch(83.57% 0.00852 44.89)",
+          "oklch(95.00% 0.00852 44.89)"
+        ]
+      },
+      "card-border": {
+        "role": "neutral",
+        "displayName": "Card Border",
+        "canonical": "#dcebe3",
+        "tonalRamp": [
+          "oklch(15.00% 0.01918 162.91)",
+          "oklch(26.43% 0.01918 162.91)",
+          "oklch(37.86% 0.01918 162.91)",
+          "oklch(49.29% 0.01918 162.91)",
+          "oklch(60.71% 0.01918 162.91)",
+          "oklch(72.14% 0.01918 162.91)",
+          "oklch(83.57% 0.01918 162.91)",
+          "oklch(95.00% 0.01918 162.91)"
+        ]
+      },
+      "sample-bg": {
+        "role": "neutral",
+        "displayName": "Sample Bg",
+        "canonical": "#f6faf7",
+        "tonalRamp": [
+          "oklch(15.00% 0.00577 153.78)",
+          "oklch(26.43% 0.00577 153.78)",
+          "oklch(37.86% 0.00577 153.78)",
+          "oklch(49.29% 0.00577 153.78)",
+          "oklch(60.71% 0.00577 153.78)",
+          "oklch(72.14% 0.00577 153.78)",
+          "oklch(83.57% 0.00577 153.78)",
+          "oklch(95.00% 0.00577 153.78)"
+        ]
+      },
+      "inverse-green": {
+        "role": "primary",
+        "displayName": "Inverse Green",
+        "canonical": "#244c3b",
+        "tonalRamp": [
+          "oklch(15.00% 0.05448 164.10)",
+          "oklch(26.43% 0.05448 164.10)",
+          "oklch(37.86% 0.05448 164.10)",
+          "oklch(49.29% 0.05448 164.10)",
+          "oklch(60.71% 0.05448 164.10)",
+          "oklch(72.14% 0.05448 164.10)",
+          "oklch(83.57% 0.05448 164.10)",
+          "oklch(95.00% 0.05448 164.10)"
+        ]
+      },
+      "inverse-hover": {
+        "role": "neutral",
+        "displayName": "Inverse Hover",
+        "canonical": "#e0e8c7",
+        "tonalRamp": [
+          "oklch(15.00% 0.04454 118.36)",
+          "oklch(26.43% 0.04454 118.36)",
+          "oklch(37.86% 0.04454 118.36)",
+          "oklch(49.29% 0.04454 118.36)",
+          "oklch(60.71% 0.04454 118.36)",
+          "oklch(72.14% 0.04454 118.36)",
+          "oklch(83.57% 0.04454 118.36)",
+          "oklch(95.00% 0.04454 118.36)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Desktop hero headline."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Recurring section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Desktop planning-card titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Recurring product descriptions."
+      },
+      "hero-body": {
+        "displayName": "Hero Body",
+        "purpose": "Hero description."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Support form labels."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Standard download and support actions."
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Desktop navigation links."
+      }
+    },
+    "shadows": [
+      {
+        "name": "phone-frame",
+        "value": "0 18px 25px -18px #15362966, 0 2px 3px #15362955",
+        "purpose": "Physical phone frame."
+      },
+      {
+        "name": "hero-notebook",
+        "value": "0 5px 8px #4951441a",
+        "purpose": "Notebook overlay beside the phone."
+      },
+      {
+        "name": "notebook-page",
+        "value": "0 8px 18px #33443116",
+        "purpose": "Layered sample notebook pages."
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "0 12px 30px #16352824",
+        "purpose": "Temporary navigation disclosure."
+      }
+    ],
+    "motion": [
+      {
+        "name": "notebook-ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Illustration entrances, FAQ reveal, page hover, and directional icon feedback."
+      },
+      {
+        "name": "action-transition",
+        "value": "200ms",
+        "purpose": "Primary-action background and transform feedback; text-link arrow feedback."
+      },
+      {
+        "name": "control-transition",
+        "value": "180ms",
+        "purpose": "Navigation underline, icon feedback, and field border/background changes."
+      },
+      {
+        "name": "page-hover",
+        "value": "300ms",
+        "purpose": "Fine-pointer page rotation and lift."
+      },
+      {
+        "name": "phone-entry",
+        "value": "700ms",
+        "purpose": "One-time phone and notebook entrance; notebook delay 80ms."
+      },
+      {
+        "name": "page-entry",
+        "value": "620ms",
+        "purpose": "One-time page entrance with 60ms staggering."
+      },
+      {
+        "name": "progress-entry",
+        "value": "750ms",
+        "purpose": "One-time illustrative progress fill."
+      },
+      {
+        "name": "underline-reveal",
+        "value": "650ms",
+        "purpose": "One-time hero underline reveal."
+      },
+      {
+        "name": "faq-reveal",
+        "value": "220ms",
+        "purpose": "Opening a native FAQ answer."
+      },
+      {
+        "name": "carousel-interval",
+        "value": "5000ms",
+        "purpose": "Autoplay only while visible and not hovered, focused, paused, hidden, or under reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": ".01ms",
+        "purpose": "CSS animation/transition override; transforms and carousel autoplay are suppressed."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-min",
+        "value": "1440px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile-navigation-max",
+        "value": "900px"
+      },
+      {
+        "name": "single-column-max",
+        "value": "650px"
+      },
+      {
+        "name": "small-phone-max",
+        "value": "374px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Google Play action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Download action in the finished Cartera website.",
+      "html": "<a class=\"ds-button-primary\" href=\"https://play.google.com/store/apps/details?id=media.uqab.cartera\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 26\" width=\"21\" height=\"23\" fill=\"none\"><path d=\"M2 2 15 13 2 24V2Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"m2 2 18 10c.8.4.8 1.6 0 2L2 24M10 8l5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/></svg><span>Get it on Google Play</span><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"17\" height=\"17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-button-primary{display:inline-flex;align-items:center;justify-content:center;gap:11px;background:var(--green);color:#ffffff;border:1px solid var(--green);border-radius:9px;padding:17px 21px;min-height:54px;font-family:\"Plus Jakarta Sans\",sans-serif;font-size:15px;font-weight:600;line-height:1.2;text-decoration:none;transition:background .2s,transform .2s}.ds-button-primary:hover{background:#12382c;transform:translateY(-2px)}.ds-button-primary:focus-visible{outline:3px solid #7856a3;outline-offset:5px;border-radius:3px;}.ds-button-primary:active{transform:translateY(0) scale(.98)}.ds-button-primary svg{transition:transform 180ms cubic-bezier(.16,1,.3,1)}.ds-button-primary:hover svg:last-child,.ds-button-primary:focus-visible svg:last-child{transform:translate(2px,-2px)}@media(prefers-reduced-motion:reduce){.ds-button-primary,.ds-button-primary svg{transition-duration:.01ms}.ds-button-primary:hover,.ds-button-primary:active,.ds-button-primary svg:last-child{transform:none}}"
+    },
+    {
+      "name": "Compact Google Play action",
+      "kind": "button",
+      "refersTo": "button-compact",
+      "description": "Download action in the finished Cartera website.",
+      "html": "<a class=\"ds-button-compact\" href=\"https://play.google.com/store/apps/details?id=media.uqab.cartera\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 26\" width=\"21\" height=\"23\" fill=\"none\"><path d=\"M2 2 15 13 2 24V2Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"m2 2 18 10c.8.4.8 1.6 0 2L2 24M10 8l5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/></svg><span>Google Play</span><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"17\" height=\"17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-button-compact{display:inline-flex;align-items:center;justify-content:center;gap:11px;background:var(--green);color:#ffffff;border:1px solid var(--green);border-radius:9px;padding:12px 16px;min-height:46px;font-family:\"Plus Jakarta Sans\",sans-serif;font-size:14px;font-weight:600;line-height:1.2;text-decoration:none;transition:background .2s,transform .2s}.ds-button-compact:hover{background:#12382c;transform:translateY(-2px)}.ds-button-compact:focus-visible{outline:3px solid #7856a3;outline-offset:5px;border-radius:3px;}.ds-button-compact:active{transform:translateY(0) scale(.98)}.ds-button-compact svg{transition:transform 180ms cubic-bezier(.16,1,.3,1)}.ds-button-compact:hover svg:last-child,.ds-button-compact:focus-visible svg:last-child{transform:translate(2px,-2px)}@media(prefers-reduced-motion:reduce){.ds-button-compact,.ds-button-compact svg{transition-duration:.01ms}.ds-button-compact:hover,.ds-button-compact:active,.ds-button-compact svg:last-child{transform:none}}"
+    },
+    {
+      "name": "Inverse Google Play action",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "Download action in the finished Cartera website.",
+      "html": "<a class=\"ds-button-inverse\" href=\"https://play.google.com/store/apps/details?id=media.uqab.cartera\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 26\" width=\"21\" height=\"23\" fill=\"none\"><path d=\"M2 2 15 13 2 24V2Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"m2 2 18 10c.8.4.8 1.6 0 2L2 24M10 8l5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/></svg><span>Get it on Google Play</span><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"17\" height=\"17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-button-inverse{display:inline-flex;align-items:center;justify-content:center;gap:11px;background:var(--paper);color:#244c3b;border:1px solid var(--paper);border-radius:9px;padding:17px 21px;min-height:54px;font-family:\"Plus Jakarta Sans\",sans-serif;font-size:15px;font-weight:600;line-height:1.2;text-decoration:none;transition:background .2s,transform .2s}.ds-button-inverse:hover{background:#e0e8c7;transform:translateY(-2px)}.ds-button-inverse:focus-visible{outline:3px solid #7856a3;outline-offset:5px;border-radius:3px;}.ds-button-inverse:active{transform:translateY(0) scale(.98)}.ds-button-inverse svg{transition:transform 180ms cubic-bezier(.16,1,.3,1)}.ds-button-inverse:hover svg:last-child,.ds-button-inverse:focus-visible svg:last-child{transform:translate(2px,-2px)}@media(prefers-reduced-motion:reduce){.ds-button-inverse,.ds-button-inverse svg{transition-duration:.01ms}.ds-button-inverse:hover,.ds-button-inverse:active,.ds-button-inverse svg:last-child{transform:none}}"
+    },
+    {
+      "name": "Text link",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "Underlined secondary action with a directional arrow.",
+      "html": "<a class=\"ds-text-link\" href=\"#features\">Explore the features<svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"17\" height=\"17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-text-link{display:inline-flex;align-items:center;gap:9px;min-height:44px;color:var(--green);font-family:\"Plus Jakarta Sans\",sans-serif;font-size:14px;font-weight:500;text-decoration:underline;text-decoration-color:#9eafa4;text-underline-offset:6px}.ds-text-link svg{transition:transform .2s}.ds-text-link:hover svg{transform:translateX(3px)}.ds-text-link:focus-visible{outline:3px solid #7856a3;outline-offset:5px;border-radius:3px;}@media(prefers-reduced-motion:reduce){.ds-text-link svg{transition-duration:.01ms}.ds-text-link:hover svg{transform:none}}"
+    },
+    {
+      "name": "Support field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labeled email field with focus and invalid states.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-email\">Email address</label><input id=\"ds-email\" type=\"email\" placeholder=\"alex@example.com\" autocomplete=\"email\" required></div>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:8px;font-family:\"Plus Jakarta Sans\",sans-serif}.ds-field label{color:var(--ink);font-size:12px;font-weight:500}.ds-field input{width:100%;border:1px solid #bdc8b9;border-radius:7px;background:var(--paper);padding:13px 14px;min-height:46px;font-family:\"Plus Jakarta Sans\",sans-serif;font-size:14px;color:var(--ink);transition:border-color 180ms ease,background-color 180ms ease}.ds-field input::placeholder{color:var(--quiet);opacity:1}.ds-field input:focus{background:#fff;border-color:var(--green)}.ds-field input:focus-visible{outline:3px solid #7856a3;outline-offset:5px;border-radius:3px;}.ds-field input[aria-invalid=\"true\"]{border-color:#a42726;background:#fff8f5}@media(max-width:650px){.ds-field input{font-size:16px;padding-inline:12px}}@media(prefers-reduced-motion:reduce){.ds-field input{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Desktop navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Plain header links with an animated underline on hover and focus.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#features\">Features</a><a href=\"#shared-finances\">Shared finances</a><a href=\"#faq\">FAQ</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:30px;background:var(--mint);font-family:\"Plus Jakarta Sans\",sans-serif;font-size:14px;color:hsl(var(--foreground))}.ds-nav a{position:relative;padding-block:12px;color:inherit;text-decoration:none}.ds-nav a::after{content:\"\";position:absolute;left:0;right:0;bottom:4px;height:1px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform 180ms ease-out}.ds-nav a:hover::after,.ds-nav a:focus-visible::after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:3px solid #7856a3;outline-offset:5px;border-radius:3px;}@media(prefers-reduced-motion:reduce){.ds-nav a::after{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Entry chip",
+      "kind": "chip",
+      "refersTo": "entry-chip",
+      "description": "Static label for an available entry method.",
+      "html": "<span class=\"ds-chip\">Quick entry</span>",
+      "css": ".ds-chip{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border:1px solid #ccd7c7;background:#edf2e8;font-family:\"Plus Jakarta Sans\",sans-serif;font-size:11px;border-radius:5px;color:var(--green)}"
+    },
+    {
+      "name": "Planning card",
+      "kind": "card",
+      "refersTo": "planning-card",
+      "description": "Flat white product card with a pale sample planning inset.",
+      "html": "<article class=\"ds-planning-card\"><h3>Budgets that fit your life</h3><p>Weekly, monthly, and yearly budgets combine overall or category limits with spending progress and remaining amounts.</p><div class=\"ds-sample\"><span>Monthly groceries</span><div class=\"ds-amount\"><span><strong>$120</strong> of $200</span><span>60%</span></div><div class=\"ds-progress\"><span></span></div><p>$80 of room left in the plan</p></div></article>",
+      "css": ".ds-planning-card{display:flex;flex-direction:column;padding:30px 24px 24px;background:var(--paper);border:1px solid #dcebe3;border-radius:12px;font-family:\"Plus Jakarta Sans\",sans-serif;color:hsl(var(--foreground))}.ds-planning-card h3{font-size:24px;font-weight:700;letter-spacing:-.65px;line-height:1.25;margin:17px 0 12px}.ds-planning-card>p{color:var(--quiet);font-size:15px;line-height:1.75;margin:0 0 27px}.ds-sample{background:#f6faf7;border-radius:8px;padding:19px 17px;margin-top:auto;min-height:164px;color:var(--ink);font-size:12px}.ds-amount{display:flex;justify-content:space-between;font-size:11px;margin:21px 0 11px}.ds-amount strong{font-weight:600}.ds-progress{height:8px;border-radius:20px;background:#d9eddc;overflow:hidden}.ds-progress>span{display:block;width:60%;background:var(--green);height:100%;border-radius:inherit}.ds-sample>p{font-size:9px;color:var(--quiet);margin-top:10px}"
+    },
+    {
+      "name": "Shared-finance card",
+      "kind": "card",
+      "refersTo": "shared-card",
+      "description": "Green product card with an anchored examples row.",
+      "html": "<article class=\"ds-shared-card\"><h3>Shared funds</h3><p>Contributions, expenses, and balances belong to one shared fund, with member access determined by group permissions.</p><div class=\"ds-shared-example\">Club funds · Events · Contributions</div></article>",
+      "css": ".ds-shared-card{background:var(--green);border-radius:14px;padding:31px 26px 23px;color:#fff;display:flex;flex-direction:column;font-family:\"Plus Jakarta Sans\",sans-serif}.ds-shared-card h3{font-size:27px;font-weight:700;letter-spacing:-.6px;margin:15px 0}.ds-shared-card>p{color:#e1eee7;font-size:15px;line-height:1.8;margin:0 0 26px}.ds-shared-example{font-size:10px;border-top:1px solid #668774;padding-top:17px;margin-top:auto;color:#d8e9df;line-height:1.8}"
+    },
+    {
+      "name": "Carousel control",
+      "kind": "button",
+      "refersTo": "carousel-control",
+      "description": "Round manual screenshot navigation control.",
+      "html": "<button type=\"button\" class=\"ds-carousel-control\" aria-label=\"Next screenshot\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"19\" height=\"19\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 18 6-6-6-6\"/></svg></button>",
+      "css": ".ds-carousel-control{width:44px;height:44px;display:grid;place-items:center;border:0;padding:0;border-radius:50%;color:var(--green);background:var(--paper);transition:background 150ms ease}.ds-carousel-control:hover:not(:disabled){background:#b6e6c9}.ds-carousel-control:disabled{opacity:.5;cursor:default}.ds-carousel-control:focus-visible{outline:3px solid #7856a3;outline-offset:5px;border-radius:3px;}.ds-carousel-control svg{transition:transform 180ms cubic-bezier(.16,1,.3,1)}.ds-carousel-control:hover:not(:disabled) svg{transform:translateX(2px)}.ds-carousel-control:active:not(:disabled) svg{transform:scale(.86)}@media(prefers-reduced-motion:reduce){.ds-carousel-control,.ds-carousel-control svg{transition-duration:.01ms}.ds-carousel-control svg{transform:none!important}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The financial notebook",
+    "overview": "Cartera uses the financial notebook as its visual reference: clear text, pale section bands, softly rounded surfaces, and recognizable pages for different parts of life. The owner’s Monefy-inspired direction appears as pale mint, white, warm gray, and dark green with a readable sans-serif throughout.\n\nThe website presents an Android product through its actual app icon and owner-supplied app screenshots. Notebook and planning illustrations explain the recordkeeping mechanism; their sample records are identified as illustrative. Product descriptions use direct, declarative language, while download and support controls use clear action wording.",
+    "keyCharacteristics": [
+      "Pale mint, white, and warm-gray section bands with dark green accents.",
+      "Self-hosted Plus Jakarta Sans for both headings and reading text.",
+      "Actual app screenshots alongside softly layered notebook illustrations.",
+      "Comfortable spacing, visible focus, and motion that respects reduced-motion preferences."
+    ],
+    "rules": [
+      {
+        "name": "Readable Sans",
+        "body": "Use Plus Jakarta Sans for display and reading text; retain the clean sans-serif direction confirmed for Cartera.",
+        "section": "typography"
+      },
+      {
+        "name": "Quiet Depth",
+        "body": "Use tonal surfaces and fine borders for ordinary content; reserve the observed diffuse shadows for the phone, notebook pages, and mobile navigation.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the existing mint, paper, and warm-gray surfaces with dark green text and actions.",
+      "Do keep headings and body copy in the self-hosted Plus Jakarta Sans family.",
+      "Do retain the actual Cartera icon, real app screenshots, and understandable notebook mechanism.",
+      "Do label sample financial records as illustrations and keep product descriptions declarative.",
+      "Do preserve visible keyboard focus, labeled controls, responsive stacking, and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't reintroduce the superseded ivory-and-serif visual direction.",
+      "Don't use illustration microtext as the size for product descriptions or form entry.",
+      "Don't replace genuine app captures with fabricated interfaces presented as screenshots.",
+      "Don't make animation necessary to reveal content or remove the carousel’s manual controls."
+    ]
+  }
+}

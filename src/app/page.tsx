@@ -112,15 +112,15 @@ export default function Home() {
           </div>
           <div className="planning-grid">
             <article className="planning-card">
-              <span className="feature-index">SPENDING</span><h3>Budgets that fit your life</h3><p>Weekly, monthly, and yearly budgets combine overall or category limits with spending progress and remaining amounts.</p>
+              <h3>Budgets that fit your life</h3><p>Weekly, monthly, and yearly budgets combine overall or category limits with spending progress and remaining amounts.</p>
               <div className="sample-panel"><div className="sample-title"><ShoppingBasket size={23} aria-hidden="true" /><span>Monthly groceries</span></div><div className="sample-amount"><span><strong>$120</strong> of $200</span><span>60%</span></div><div className="sample-progress" data-motion="progress"><span style={{ width: '60%' }} /></div><p>$80 of room left in the plan</p></div>
             </article>
             <article className="planning-card">
-              <span className="feature-index">SAVING</span><h3>Flexible savings goals</h3><p>Savings goals support targets, deadlines, regular contributions, emergency funds, and recurring future costs.</p>
+              <h3>Flexible savings goals</h3><p>Savings goals support targets, deadlines, regular contributions, emergency funds, and recurring future costs.</p>
               <div className="sample-panel sample-panel--saving"><div className="sample-title"><Plane size={23} aria-hidden="true" /><span>Weekend trip</span></div><div className="sample-amount"><span><strong>$80</strong> of $200</span><span>40%</span></div><div className="sample-progress" data-motion="progress"><span style={{ width: '40%' }} /></div><p>A little closer with every contribution</p></div>
             </article>
             <article className="planning-card">
-              <span className="feature-index">UPCOMING</span><h3>Scheduled expenses</h3><p>Scheduled expenses include due dates, recurring periods, recorded payments, and reminders subject to device permissions.</p>
+              <h3>Scheduled expenses</h3><p>Scheduled expenses include due dates, recurring periods, recorded payments, and reminders subject to device permissions.</p>
               <div className="sample-panel"><div className="sample-title"><CalendarDays size={23} aria-hidden="true" /><span>Rent <small>Due 10 October</small></span></div><div className="sample-check"><CircleCheck size={17} aria-hidden="true" /><span>September</span><span>Recorded</span></div><div className="sample-check sample-check--pending"><span className="empty-check" aria-hidden="true" /><span>October</span><span>Upcoming</span></div></div>
             </article>
           </div>
@@ -137,9 +137,9 @@ export default function Home() {
         <div className="site-shell">
           <div className="section-heading heading-with-note"><div><h2 id="shared-title">Shared money.<br />A clearer record.</h2></div><p>Trips and households. Clubs and communities.<br />Dues and customer collections.</p></div>
           <div className="shared-grid">
-            <article><Handshake size={32} strokeWidth={1.3} aria-hidden="true" /><span className="feature-index">FRIENDS & HOUSEHOLDS</span><h3>Shared costs & settlements</h3><p>Shared expenses, equal or unequal shares, and recorded settlements show who paid and how balances stand.</p><div className="shared-example">Trips <span>·</span> Roommates <span>·</span> Shared groceries</div></article>
-            <article><Users size={32} strokeWidth={1.3} aria-hidden="true" /><span className="feature-index">CLUBS & COMMUNITIES</span><h3>Shared funds</h3><p>Contributions, expenses, and balances belong to one shared fund, with member access determined by group permissions.</p><div className="shared-example">Club funds <span>·</span> Events <span>·</span> Contributions</div></article>
-            <article><ReceiptText size={32} strokeWidth={1.3} aria-hidden="true" /><span className="feature-index">ORGANIZERS & SMALL BUSINESSES</span><h3>Dues & collections</h3><p>Recurring dues, charges, recorded payments, and statements make outstanding amounts easier to follow across members or customers.</p><div className="shared-example">Membership dues <span>·</span> Rent <span>·</span> Customer balances</div></article>
+            <article><Handshake size={32} strokeWidth={1.3} aria-hidden="true" /><h3>Shared costs & settlements</h3><p>Shared expenses, equal or unequal shares, and recorded settlements show who paid and how balances stand.</p><div className="shared-example">Trips <span>·</span> Roommates <span>·</span> Shared groceries</div></article>
+            <article><Users size={32} strokeWidth={1.3} aria-hidden="true" /><h3>Shared funds</h3><p>Contributions, expenses, and balances belong to one shared fund, with member access determined by group permissions.</p><div className="shared-example">Club funds <span>·</span> Events <span>·</span> Contributions</div></article>
+            <article><ReceiptText size={32} strokeWidth={1.3} aria-hidden="true" /><h3>Dues & collections</h3><p>Recurring dues, charges, recorded payments, and statements make outstanding amounts easier to follow across members or customers.</p><div className="shared-example">Membership dues <span>·</span> Rent <span>·</span> Customer balances</div></article>
           </div>
           <p className="shared-access-note">Online collaboration is available with eligible access. Each group has one configured currency and record visibility based on permissions. Group updates use an internet connection.</p>
         </div>
