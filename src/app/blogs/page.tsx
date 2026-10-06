@@ -1,29 +1,16 @@
-import type { Metadata } from 'next';
 import { BlogCard } from '@/components/blog-card';
 import { blogPosts } from '@/lib/blog-data';
 import { blogPostsEnhanced } from '@/lib/blog-data-enhanced';
 import { generateBlogListSchema } from '@/lib/structured-data';
 import { BookText } from 'lucide-react';
+import { createPageMetadata } from '@/lib/seo';
+import { JsonLd } from '@/components/json-ld';
 
-export const metadata: Metadata = {
-  title: 'Blog - Financial Tips & Insights',
-  description: 'Discover expert tips, guides, and insights on personal finance, budget planning, and expense tracking. Learn how to make the most of Cartera.',
-  keywords: 'financial tips, budget planning tips, expense tracking guide, personal finance blog, money management advice',
-  openGraph: {
-    title: 'Blog - Financial Tips & Insights | Cartera',
-    description: 'Expert tips, guides, and insights on personal finance, budget planning, and expense tracking.',
-    type: 'website',
-    siteName: 'Cartera',
-  },
-  twitter: {
-    card: 'summary',
-    title: 'Blog - Financial Tips & Insights | Cartera',
-    description: 'Expert tips, guides, and insights on personal finance and expense tracking.',
-  },
-  alternates: {
-    canonical: 'https://cartera.yellowbytes.dev/blogs',
-  },
-};
+export const metadata = createPageMetadata({
+  title: 'Expense Tracking & Budget Planning Guides',
+  description: 'Cartera guides cover expense tracking, budget planning, and financial recordkeeping, with tutorials and app comparisons.',
+  path: '/blogs',
+});
 
 export default function BlogsPage() {
   const blogListSchema = generateBlogListSchema(
@@ -32,10 +19,7 @@ export default function BlogsPage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }}
-      />
+      <JsonLd data={blogListSchema} />
       
       <div className="py-8 sm:py-12">
       {/* Header Section */}

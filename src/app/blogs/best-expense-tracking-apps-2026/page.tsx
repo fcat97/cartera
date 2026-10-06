@@ -1,107 +1,39 @@
-import type { Metadata } from 'next';
+import { createPageMetadata } from '@/lib/seo';
+import { JsonLd } from '@/components/json-ld';
+import { getBlogPost } from '@/lib/blog-data-enhanced';
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/structured-data';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowLeft, Clock, CheckCircle2, Star, Download, Smartphone } from 'lucide-react';
 
-const publishDate = new Date('2026-01-15');
-const blogTitle = 'Best Expense Tracking Apps 2026: 8 Apps Compared';
-const blogExcerpt = 'Detailed comparison of the top 8 expense tracking apps for 2026, including Money Manager, Cashew, Budge, and Cartera. Find the perfect app for your budgeting needs.';
-const blogSlug = 'best-expense-tracking-apps-2026';
-const readingTime = 12;
-const featuredImage = '/blog-app-comparison.jpg';
+const blogPost = getBlogPost('best-expense-tracking-apps-2026')!;
+const publishDate = new Date(blogPost.date);
+const blogTitle = blogPost.title;
+const blogExcerpt = blogPost.excerpt;
+const blogSlug = blogPost.slug;
+const readingTime = blogPost.readingTime;
+const featuredImage = blogPost.featuredImage;
 
-export const metadata: Metadata = {
-  title: `${blogTitle} | Cartera`,
+export const metadata = createPageMetadata({
+  title: blogPost.seoTitle,
   description: blogExcerpt,
-  keywords: ['expense tracking apps', 'best budget apps 2026', 'money management apps', 'personal finance apps', 'expense tracker comparison', 'Cartera app', 'Money Manager', 'Cashew app', 'Budge app'],
-  authors: [{ name: 'Cartera Team' }],
-  openGraph: {
-    title: blogTitle,
-    description: blogExcerpt,
-    type: 'article',
-    publishedTime: publishDate.toISOString(),
-    authors: ['Cartera Team'],
-    images: [
-      {
-        url: `https://cartera.yellowbytes.dev${featuredImage}`,
-        width: 1200,
-        height: 600,
-        alt: blogTitle,
-      },
-    ],
-    siteName: 'Cartera',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: blogTitle,
-    description: blogExcerpt,
-    images: [`https://cartera.yellowbytes.dev${featuredImage}`],
-  },
-  alternates: {
-    canonical: `https://cartera.yellowbytes.dev/blogs/${blogSlug}`,
-  },
-};
+  path: `/blogs/${blogSlug}`,
+  image: { url: featuredImage, width: 1200, height: 600, alt: blogTitle },
+  article: { publishedTime: publishDate.toISOString(), author: blogPost.author },
+});
 
 export default function BestExpenseTrackingApps2026() {
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: blogTitle,
-    description: blogExcerpt,
-    image: featuredImage,
-    datePublished: publishDate.toISOString(),
-    dateModified: publishDate.toISOString(),
-    author: {
-      '@type': 'Organization',
-      name: 'Cartera Team',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Cartera',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://cartera.yellowbytes.dev/icon.png',
-      },
-    },
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://cartera.yellowbytes.dev',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Blog',
-        item: 'https://cartera.yellowbytes.dev/blogs',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: blogTitle,
-        item: `https://cartera.yellowbytes.dev/blogs/${blogSlug}`,
-      },
-    ],
-  };
+  const articleSchema = generateArticleSchema(
+    blogSlug, blogTitle, blogExcerpt, blogPost.date, blogPost.keywords, featuredImage
+  );
+  const breadcrumbSchema = generateBreadcrumbSchema(blogTitle, blogSlug);
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbSchema} />
       
       <div className="py-8 sm:py-12">
         <div className="max-w-4xl mx-auto">
@@ -122,12 +54,12 @@ export default function BestExpenseTrackingApps2026() {
             </Link>
           </Button>
 
-          <article itemScope itemType="https://schema.org/BlogPosting">
+          <article>
             <div className="mb-8">
               <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
-                  <time dateTime={publishDate.toISOString()} itemProp="datePublished">
+                  <time dateTime={publishDate.toISOString()}>
                     January 15, 2026
                   </time>
                 </div>
@@ -136,7 +68,7 @@ export default function BestExpenseTrackingApps2026() {
                   <span>{readingTime} min read</span>
                 </div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6" itemProp="headline">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 {blogTitle}
               </h1>
               <div className="relative h-64 md:h-96 w-full rounded-lg overflow-hidden mb-8">
@@ -146,15 +78,12 @@ export default function BestExpenseTrackingApps2026() {
                   fill
                   className="object-cover"
                   priority
-                  itemProp="image"
                 />
               </div>
-              <meta itemProp="author" content="Cartera Team" />
-              <meta itemProp="dateModified" content={publishDate.toISOString()} />
             </div>
 
             <Card>
-              <CardContent className="prose dark:prose-invert max-w-none text-foreground/80 text-base leading-relaxed px-6 sm:px-8 md:px-10 py-8" itemProp="articleBody">
+              <CardContent className="prose dark:prose-invert max-w-none text-foreground/80 text-base leading-relaxed px-6 sm:px-8 md:px-10 py-8">
                 <div className="space-y-6">
                   <p className="text-lg">
                     In 2026, choosing the right expense tracking app can make the difference between financial chaos and clarity. We've tested and compared 8 of the most popular expense tracking apps to help you find the perfect fit for your budgeting style, whether you're a casual tracker or a meticulous accountant.

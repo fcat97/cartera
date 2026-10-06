@@ -1,3 +1,48 @@
+import { absoluteUrl, GOOGLE_PLAY_URL, SITE_DESCRIPTION } from './site';
+
+export function generateSiteSchema() {
+  const home = absoluteUrl('/');
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization', '@id': `${home}#publisher`, name: 'UqabMedia',
+        url: home, logo: { '@type': 'ImageObject', url: absoluteUrl('/icon.png') },
+      },
+      {
+        '@type': 'WebSite', '@id': `${home}#website`, name: 'Cartera', url: home,
+        description: SITE_DESCRIPTION, inLanguage: 'en', publisher: { '@id': `${home}#publisher` },
+      },
+    ],
+  };
+}
+
+export function generateAppSchema() {
+  const home = absoluteUrl('/');
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage', '@id': `${home}#webpage`, url: home,
+        name: 'Cartera — Your money, organized for real life.', description: SITE_DESCRIPTION,
+        isPartOf: { '@id': `${home}#website` }, mainEntity: { '@id': `${home}#app` }, inLanguage: 'en',
+      },
+      {
+        '@type': 'MobileApplication', '@id': `${home}#app`, name: 'Cartera',
+        applicationCategory: 'FinanceApplication', operatingSystem: 'Android',
+        description: SITE_DESCRIPTION, url: home, downloadUrl: GOOGLE_PLAY_URL,
+        image: absoluteUrl('/icon.png'), publisher: { '@id': `${home}#publisher` },
+        screenshot: [
+          absoluteUrl('/screenshots/books-and-pages-light.webp'),
+          absoluteUrl('/screenshots/spending-analysis.webp'),
+          absoluteUrl('/screenshots/monthly-budget.webp'),
+        ],
+        featureList: ['Expense and income records', 'Books and notebook pages', 'Budgets', 'Savings goals', 'Loan records', 'Shared financial records'],
+      },
+    ],
+  };
+}
+
 interface ArticleStructuredData {
   '@context': string;
   '@type': string;
@@ -5,7 +50,6 @@ interface ArticleStructuredData {
   description: string;
   image: string;
   datePublished: string;
-  dateModified: string;
   author: {
     '@type': string;
     name: string;
@@ -34,16 +78,15 @@ export function generateArticleSchema(
   keywords: string[],
   imageUrl: string
 ): ArticleStructuredData {
-  const baseUrl = 'https://cartera.yellowbytes.dev';
+  const baseUrl = absoluteUrl('/');
   
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: title,
     description: description,
-    image: `${baseUrl}${imageUrl}`,
-    datePublished: datePublished,
-    dateModified: datePublished,
+    image: absoluteUrl(imageUrl),
+    datePublished: new Date(datePublished).toISOString(),
     author: {
       '@type': 'Organization',
       name: 'Cartera Team',
@@ -51,15 +94,15 @@ export function generateArticleSchema(
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Cartera',
+      name: 'UqabMedia',
       logo: {
         '@type': 'ImageObject',
-        url: `${baseUrl}/icon.png`,
+        url: absoluteUrl('/icon.png'),
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${baseUrl}/blogs/${slug}`,
+      '@id': absoluteUrl(`/blogs/${slug}`),
     },
     keywords: keywords.join(', '),
   };
@@ -80,7 +123,7 @@ export function generateBreadcrumbSchema(
   blogTitle: string,
   blogSlug: string
 ): BreadcrumbStructuredData {
-  const baseUrl = 'https://cartera.yellowbytes.dev';
+  const baseUrl = absoluteUrl('/');
   
   return {
     '@context': 'https://schema.org',
@@ -96,13 +139,13 @@ export function generateBreadcrumbSchema(
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: `${baseUrl}/blogs`,
+        item: absoluteUrl('/blogs'),
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: blogTitle,
-        item: `${baseUrl}/blogs/${blogSlug}`,
+        item: absoluteUrl(`/blogs/${blogSlug}`),
       },
     ],
   };
@@ -122,15 +165,13 @@ interface BlogListStructuredData {
 export function generateBlogListSchema(
   blogPosts: Array<{ slug: string; title: string }>
 ): BlogListStructuredData {
-  const baseUrl = 'https://cartera.yellowbytes.dev';
-  
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     itemListElement: blogPosts.map((post, index) => ({
       '@type': 'ListItem',
       position: index + 1,
-      url: `${baseUrl}/blogs/${post.slug}`,
+      url: absoluteUrl(`/blogs/${post.slug}`),
       name: post.title,
     })),
   };

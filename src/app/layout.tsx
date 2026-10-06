@@ -6,19 +6,22 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { RedirectHandler } from '@/components/redirect-handler';
 import { Suspense } from 'react';
-import { SITE_URL, SITE_DESCRIPTION } from '@/lib/site';
+import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION } from '@/lib/site';
+import { JsonLd } from '@/components/json-ld';
+import { generateSiteSchema } from '@/lib/structured-data';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cartera — Expense Tracker, Budgets & Shared Finances',
+    default: SITE_TITLE,
     template: '%s | Cartera',
   },
   description: SITE_DESCRIPTION,
-  keywords: ['expense tracker', 'budget planner', 'personal finance', 'money management', 'financial app'],
   authors: [{ name: 'UqabMedia' }],
   creator: 'UqabMedia',
   metadataBase: new URL(SITE_URL),
-  openGraph: { siteName: 'Cartera', images: [{ url: '/social-preview.png', width: 1200, height: 630 }] },
+  applicationName: 'Cartera',
+  icons: { icon: [{ url: '/icon.png', type: 'image/png', sizes: '512x512' }], apple: '/icon.png' },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
 };
 
 export default function RootLayout({
@@ -32,6 +35,7 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className={cn('font-body antialiased flex flex-col min-h-screen')}>
+        <JsonLd data={generateSiteSchema()} />
         <a href="#main-content" className="skip-link">Skip to content</a>
         <Suspense fallback={null}>
           <RedirectHandler />

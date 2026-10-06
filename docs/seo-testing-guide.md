@@ -1,138 +1,39 @@
-# Quick SEO Testing Guide
+# SEO verification and publication
 
-## Testing Your Blog's SEO
+Canonical site: https://cartera.yellowbytes.dev/. Implementation checked 6 October 2026.
 
-### 1. Test Structured Data (JSON-LD)
-Visit Google Rich Results Test:
-- URL: https://search.google.com/test/rich-results
-- Test each blog post URL:
-  - `https://cartera.app/blogs/getting-started-with-cartera`
-  - `https://cartera.app/blogs/budget-planning-tips`
-  - `https://cartera.app/blogs/double-entry-bookkeeping-explained`
-- Look for: ✅ BlogPosting schema ✅ BreadcrumbList schema
-
-### 2. Verify Sitemap
-- Visit: `https://cartera.app/sitemap.xml`
-- Should show all blog posts with:
-  - URLs
-  - Last modified dates
-  - Change frequencies
-  - Priority values
-
-### 3. Check Robots.txt
-- Visit: `https://cartera.app/robots.txt`
-- Should allow all crawlers except `/api/` and `/_next/`
-- Should reference sitemap URL
-
-### 4. Test Open Graph Tags
-Use Open Graph debugger:
-- Facebook: https://developers.facebook.com/tools/debug/
-- LinkedIn: https://www.linkedin.com/post-inspector/
-- Enter blog post URLs and verify:
-  - ✅ Title displays correctly
-  - ✅ Description shows
-  - ✅ Featured image appears (1200x600)
-
-### 5. Test Twitter Cards
-- URL: https://cards-dev.twitter.com/validator
-- Enter blog post URLs
-- Verify: ✅ Summary large image card ✅ Title ✅ Description ✅ Image
-
-### 6. Submit to Search Engines
-
-#### Google Search Console
-1. Go to: https://search.google.com/search-console
-2. Add property: `cartera.app`
-3. Verify ownership (via DNS or HTML file)
-4. Submit sitemap: `https://cartera.app/sitemap.xml`
-5. Request indexing for each blog post URL
-
-#### Bing Webmaster Tools
-1. Go to: https://www.bing.com/webmasters
-2. Add site: `cartera.app`
-3. Verify ownership
-4. Submit sitemap: `https://cartera.app/sitemap.xml`
-5. Request URL inspection for blog posts
-
-### 7. Check Mobile-Friendliness
-- URL: https://search.google.com/test/mobile-friendly
-- Test all blog post URLs
-- Verify: ✅ Mobile-friendly ✅ No errors
-
-### 8. Test Page Speed
-- URL: https://pagespeed.web.dev/
-- Test blog listing and individual posts
-- Target: ✅ 90+ score on mobile ✅ 95+ on desktop
-
-### 9. Local Testing
+## Local verification
 
 ```bash
-# Start dev server
-npm run dev
-
-# Test URLs in browser
-http://localhost:9002/blogs
-http://localhost:9002/blogs/getting-started-with-cartera
-http://localhost:9002/sitemap.xml
-http://localhost:9002/robots.txt
-
-# View page source and verify:
-# - JSON-LD script tags present
-# - Meta tags (title, description, og:*, twitter:*)
-# - Canonical link tag
-# - Semantic HTML (article, time, nav)
+npm test
+npm run build
+npm run seo:check
 ```
 
-### 10. Monitor Rankings
+Run the build with the development server stopped: both use `.next/`. Restart `npm run dev` after production verification. The export is in `out/`.
 
-#### After 2-4 Weeks
-Check if blog posts appear for target keywords:
-- "expense tracker tutorial"
-- "budget planning tips 2026"
-- "double-entry bookkeeping explained"
-- "cartera getting started"
-- "personal finance beginner guide"
+The SEO check reads the exported HTML, sitemap, and robots.txt. It verifies unique titles and descriptions, matching canonical and Open Graph URLs, local social images, one primary heading per page, parseable JSON-LD, factual app metadata, article publication dates, breadcrumbs, internal links, and an unindexed 404 page. CI runs this check before uploading the Pages artifact. It does not simulate Google indexing or assign a Lighthouse score.
 
-#### Tools to Use
-- Google Search Console (Performance report)
-- Bing Webmaster Tools (SEO Reports)
-- Google Analytics (Organic traffic)
-- Ahrefs/SEMrush (Keyword tracking)
+## Publication checks
 
-## Expected Timeline
+1. Deploy the checked `out/` artifact to the canonical domain. Confirm HTTPS and that unknown routes return a real HTTP 404 rather than the homepage. Check that each sitemap page returns HTTP 200 and that CSS, JavaScript, fonts, and images load.
+2. Inspect [robots.txt](https://cartera.yellowbytes.dev/robots.txt) and [sitemap.xml](https://cartera.yellowbytes.dev/sitemap.xml). Rendering assets under `/_next/` must be crawlable. Only actual public pages belong in the sitemap.
+3. In the verified [Google Search Console](https://search.google.com/search-console) property for this domain, submit `https://cartera.yellowbytes.dev/sitemap.xml`. Use URL Inspection for the homepage and four article URLs. Account ownership and deployment are required; these actions are not performed by the local implementation.
+4. Use [Rich Results Test](https://search.google.com/test/rich-results) for the deployed articles. Validate general app/site schema with [Schema Markup Validator](https://validator.schema.org/). Inspect rendered content and canonical selection in Search Console.
+5. Check previews with [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) and [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/). The homepage uses `social-preview.png`; articles use their own 1200 × 600 images.
+6. Measure the deployed homepage and articles with [PageSpeed Insights](https://pagespeed.web.dev/). Address measured regressions rather than assuming a score from local checks. Monitor Search Console impressions, clicks, indexing, and Core Web Vitals after publication.
 
-- **Week 1**: Submit sitemaps, request indexing
-- **Week 2-3**: Google/Bing start crawling and indexing
-- **Week 4-6**: Posts appear in search results (lower positions)
-- **Month 2-3**: Rankings improve as content gains authority
-- **Month 4+**: Stable rankings for targeted keywords
+## Known boundaries
 
-## Quick Wins
+App price and ratings are unverified, so they are omitted from structured data. The application schema describes the product, but it does not currently meet all of Google's software-app rich-result requirements. Existing historical blog comparisons, prices, ratings, and product-release claims still need editorial verification. Legal text remains the existing owner's content.
 
-1. Share blog posts on social media (creates backlinks)
-2. Link to blog from email signatures
-3. Reference blog posts in support articles
-4. Add blog link to app footer/about pages
-5. Cross-promote posts within the blog (internal linking)
+No indexing timeline or ranking increase is promised. Search engines choose snippets, canonical URLs, and result presentation. No new analytics tracker, ownership token, or account connection was added.
 
-## Common Issues & Fixes
+## Sources
 
-### Issue: Structured data errors
-- Fix: Validate JSON-LD syntax
-- Check: All required fields present
-
-### Issue: Not appearing in search
-- Check: Submitted sitemap?
-- Check: Robots.txt not blocking?
-- Wait: Can take 2-4 weeks
-
-### Issue: Low rankings
-- Add: More internal links
-- Update: Content regularly
-- Build: External backlinks
-- Improve: Content quality/length
-
-### Issue: Poor mobile score
-- Optimize: Image sizes
-- Reduce: JavaScript bundle size
-- Enable: Caching headers
+- [Google: JavaScript SEO and crawlable rendering assets](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics)
+- [Google: canonical URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls)
+- [Google: sitemap creation and modification dates](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
+- [Google: article structured data](https://developers.google.com/search/docs/appearance/structured-data/article)
+- [Google: software-app rich-result requirements](https://developers.google.com/search/docs/appearance/structured-data/software-app)
+- [Next.js: safe JSON-LD rendering](https://nextjs.org/docs/app/guides/json-ld)

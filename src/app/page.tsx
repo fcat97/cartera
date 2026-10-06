@@ -1,25 +1,15 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
 import { ArrowRight, ArrowUpRight, BookOpen, NotebookPen, Wallet, ChartNoAxesColumnIncreasing, Plane, House, BriefcaseBusiness, ShoppingBasket, CalendarDays, CircleCheck, Handshake, Users, ReceiptText, Mic, ImagePlus, HardDrive, LockKeyhole, Cloud, Tags, Coins, Search, Plus, Minus } from 'lucide-react';
 import { PlayStoreLink } from '@/components/play-store-link';
 import { ContactForm } from '@/components/contact-form';
 import { HeroScreenshotCarousel } from '@/components/hero-screenshot-carousel';
 import { HomeMotion } from '@/components/home-motion';
-import { SITE_DESCRIPTION, SITE_URL } from '@/lib/site';
+import { SITE_DESCRIPTION, SITE_TITLE } from '@/lib/site';
+import { createPageMetadata } from '@/lib/seo';
+import { generateAppSchema } from '@/lib/structured-data';
+import { JsonLd } from '@/components/json-ld';
 
-export const metadata: Metadata = {
-  title: { absolute: 'Cartera — Expense Tracker, Budgets & Shared Finances' },
-  description: SITE_DESCRIPTION,
-  alternates: { canonical: SITE_URL },
-  openGraph: {
-    title: 'Cartera — Your money, organized for real life.',
-    description: SITE_DESCRIPTION,
-    url: SITE_URL,
-    type: 'website',
-    images: [{ url: '/social-preview.png', width: 1200, height: 630, alt: 'Cartera — Your money, organized for real life. Available for Android.' }],
-  },
-  twitter: { card: 'summary_large_image', title: 'Cartera — Your money, organized for real life.', description: SITE_DESCRIPTION, images: ['/social-preview.png'] },
-};
+export const metadata = createPageMetadata({ title: SITE_TITLE, description: SITE_DESCRIPTION, path: '/' });
 
 const questions = [
   ['What is Cartera?', 'Cartera is an Android expense tracker and money manager that brings everyday records, budgets, savings goals, loans, and shared finances together in one financial notebook.'],
@@ -44,6 +34,7 @@ const everydayTools = [
 export default function Home() {
   return (
     <div className="home-page">
+      <JsonLd data={generateAppSchema()} />
       <HomeMotion />
       <div className="section-band section-band--mint">
       <section className="hero site-shell" aria-labelledby="hero-title">

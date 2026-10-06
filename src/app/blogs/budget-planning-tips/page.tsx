@@ -1,4 +1,5 @@
-import type { Metadata } from 'next';
+import { createPageMetadata } from '@/lib/seo';
+import { JsonLd } from '@/components/json-ld';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,37 +11,13 @@ import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/structure
 
 const blogPost = getBlogPost('budget-planning-tips')!;
 
-export const metadata: Metadata = {
-  title: blogPost.title,
+export const metadata = createPageMetadata({
+  title: blogPost.seoTitle,
   description: blogPost.excerpt,
-  keywords: blogPost.keywords,
-  authors: [{ name: blogPost.author }],
-  openGraph: {
-    title: blogPost.title,
-    description: blogPost.excerpt,
-    type: 'article',
-    publishedTime: blogPost.date,
-    authors: [blogPost.author],
-    images: [
-      {
-        url: `https://cartera.yellowbytes.dev${blogPost.featuredImage}`,
-        width: 1200,
-        height: 600,
-        alt: blogPost.title,
-      },
-    ],
-    siteName: 'Cartera',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: blogPost.title,
-    description: blogPost.excerpt,
-    images: [`https://cartera.yellowbytes.dev${blogPost.featuredImage}`],
-  },
-  alternates: {
-    canonical: `https://cartera.yellowbytes.dev/blogs/${blogPost.slug}`,
-  },
-};
+  path: `/blogs/${blogPost.slug}`,
+  image: { url: blogPost.featuredImage, width: 1200, height: 600, alt: blogPost.title },
+  article: { publishedTime: new Date(blogPost.date).toISOString(), author: blogPost.author },
+});
 
 export default function BudgetPlanningTipsBlogPost() {
   const publishDate = new Date(blogPost.date);
@@ -58,14 +35,8 @@ export default function BudgetPlanningTipsBlogPost() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbSchema} />
       
       <div className="py-8 sm:py-12">
         <div className="max-w-4xl mx-auto">
@@ -86,12 +57,12 @@ export default function BudgetPlanningTipsBlogPost() {
             </Link>
           </Button>
 
-          <article itemScope itemType="https://schema.org/BlogPosting">
+          <article>
             <div className="mb-8">
               <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
-                  <time dateTime={publishDate.toISOString()} itemProp="datePublished">
+                  <time dateTime={publishDate.toISOString()}>
                     {format(publishDate, 'MMMM dd, yyyy')}
                   </time>
                 </div>
@@ -100,7 +71,7 @@ export default function BudgetPlanningTipsBlogPost() {
                   <span>{blogPost.readingTime} min read</span>
                 </div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6" itemProp="headline">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 {blogPost.title}
               </h1>
               <div className="relative h-64 md:h-96 w-full rounded-lg overflow-hidden mb-8">
@@ -110,15 +81,12 @@ export default function BudgetPlanningTipsBlogPost() {
                   fill
                   className="object-cover"
                   priority
-                  itemProp="image"
                 />
               </div>
-              <meta itemProp="author" content={blogPost.author} />
-              <meta itemProp="dateModified" content={blogPost.date} />
             </div>
 
             <Card>
-              <CardContent className="prose dark:prose-invert max-w-none text-foreground/80 text-base leading-relaxed px-6 sm:px-8 md:px-10 py-8" itemProp="articleBody">
+              <CardContent className="prose dark:prose-invert max-w-none text-foreground/80 text-base leading-relaxed px-6 sm:px-8 md:px-10 py-8">
               <div className="space-y-6">
                 <p className="text-lg">
                   Creating a budget is one thing—sticking to it is another. These five essential tips will help you build a budget that works for your lifestyle and actually helps you achieve your financial goals in 2026.

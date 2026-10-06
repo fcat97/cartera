@@ -1,11 +1,18 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardDescription } from "@/components/ui/card";
+import { createPageMetadata } from '@/lib/seo';
+
+export const metadata = createPageMetadata({
+  title: 'Privacy Policy',
+  description: 'The Cartera privacy policy describes how UqabMedia handles app information, storage, permissions, online services, and privacy requests.',
+  path: '/privacy-policy',
+});
 
 export default function PrivacyPolicyPage() {
   return (
     <div className="py-8 sm:py-12">
       <Card className="max-w-4xl mx-auto">
         <CardHeader>
-          <CardTitle className="text-3xl font-bold text-center">Privacy Policy for Cartera</CardTitle>
+          <h1 className="text-3xl font-bold leading-none tracking-tight text-center">Privacy Policy for Cartera</h1>
           <CardDescription className="text-center">Last Updated: January 25, 2026</CardDescription>
         </CardHeader>
         <CardContent className="prose dark:prose-invert max-w-none text-foreground/80 text-base leading-relaxed px-6 sm:px-8 md:px-10">

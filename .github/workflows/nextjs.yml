@@ -77,6 +77,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
           NODE_ENV: production
+      - name: Check exported SEO
+        run: ${{ steps.detect-package-manager.outputs.manager }} run seo:check
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

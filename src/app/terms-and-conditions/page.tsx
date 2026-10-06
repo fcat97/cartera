@@ -1,4 +1,11 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardDescription } from "@/components/ui/card";
+import { createPageMetadata } from '@/lib/seo';
+
+export const metadata = createPageMetadata({
+  title: 'Terms & Conditions',
+  description: 'Terms and conditions for the Cartera Android app, including account responsibilities, acceptable use, subscriptions, and contact details.',
+  path: '/terms-and-conditions',
+});
 
 export default function TermsAndConditionsPage() {
     const lastUpdatedDate = "January 25, 2026";
@@ -7,7 +14,7 @@ export default function TermsAndConditionsPage() {
         <div className="py-8 sm:py-12">
             <Card className="max-w-4xl mx-auto">
                 <CardHeader>
-                    <CardTitle className="text-3xl font-bold text-center">Terms & Conditions for Cartera</CardTitle>
+                    <h1 className="text-3xl font-bold leading-none tracking-tight text-center">Terms & Conditions for Cartera</h1>
                     <CardDescription className="text-center">Last Updated: {lastUpdatedDate}</CardDescription>
                 </CardHeader>
                 <CardContent className="prose dark:prose-invert max-w-none text-foreground/80 text-base leading-relaxed px-6 sm:px-8 md:px-10">
