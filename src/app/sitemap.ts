@@ -7,6 +7,7 @@ export const dynamic = 'force-static';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: absoluteUrl('/'), lastModified: '2026-10-06' },
+    { url: absoluteUrl('/features'), lastModified: '2026-10-06' },
     { url: absoluteUrl('/blogs'), lastModified: '2026-10-06' },
     { url: absoluteUrl('/privacy-policy'), lastModified: '2026-01-25' },
     { url: absoluteUrl('/terms-and-conditions'), lastModified: '2026-01-25' },

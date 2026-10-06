@@ -77,12 +77,31 @@ for (const url of urls) {
     assert.ok(html.includes(`dateTime="${new Date(article.datePublished).toISOString()}"`), `${file} publication dates must match visible content`);
     const breadcrumb = schemas.find(schema => schema['@type'] === 'BreadcrumbList');
     assert.equal(breadcrumb?.itemListElement.at(-1).item, url.href, `${file} needs matching breadcrumbs`);
+  } else if (url.pathname === '/features') {
+    const collection = schemas.find(schema => schema['@type'] === 'CollectionPage');
+    assert.equal(collection?.url, url.href, 'The feature collection needs its own canonical identity');
+    const list = collection.mainEntity;
+    assert.equal(list?.['@type'], 'ItemList', 'The feature collection needs a structured feature list');
+    assert.equal(list.numberOfItems, list.itemListElement.length, 'The feature count must match the structured list');
+    assert.ok(list.numberOfItems > 0, 'The feature collection must contain features');
+    for (const item of list.itemListElement) {
+      const featureUrl = new URL(item.url);
+      assert.equal(featureUrl.origin + featureUrl.pathname, url.href, 'Feature URLs must belong to their collection');
+      assert.ok(featureUrl.hash && html.includes(`id="${featureUrl.hash.slice(1)}"`), `Missing feature description: ${item.name}`);
+    }
+    const breadcrumb = schemas.find(schema => schema['@type'] === 'BreadcrumbList');
+    assert.equal(breadcrumb?.itemListElement.at(-1).item, url.href, 'The feature collection needs matching breadcrumbs');
   }
 
   for (const [, rawHref] of html.matchAll(/<a\b[^>]*href="([^"]+)"/g)) {
-    if (!rawHref.startsWith('/') || rawHref.startsWith('//')) continue;
-    const href = new URL(rawHref, origin);
+    if ((!rawHref.startsWith('/') && !rawHref.startsWith('#')) || rawHref.startsWith('//')) continue;
+    const href = new URL(rawHref, url);
     assert.ok(pagePaths.has(href.pathname) || existsSync(resolve(output, `.${href.pathname}`)), `${file} links to a missing route: ${rawHref}`);
+    if (href.hash) {
+      const targetFile = href.pathname === '/' ? 'index.html' : `${href.pathname.slice(1)}.html`;
+      const targetHtml = href.pathname === url.pathname ? html : readFileSync(resolve(output, targetFile), 'utf8');
+      assert.ok(targetHtml.includes(`id="${decodeURIComponent(href.hash.slice(1))}"`), `${file} links to a missing section: ${rawHref}`);
+    }
   }
   console.log(`PASS ${url.pathname}: metadata, canonicals, images, headings, structured data, internal links`);
 }

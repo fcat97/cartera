@@ -8,7 +8,9 @@
           "Notebook spaces for months, trips, and projects.",
           "Related pages belong together in books."
         ],
-        "icon": "BookOpen"
+        "icon": "BookOpen",
+        "id": "books-and-pages",
+        "details": "Pages organize records around a month, household, trip, or project. Books collect related pages, with linking, moving, and archive options keeping the notebook organized as life changes."
       },
       {
         "title": "Expenses & income",
@@ -16,7 +18,9 @@
           "Everyday spending and earnings in one record.",
           "Amounts, dates, and accounts stay connected."
         ],
-        "icon": "NotebookPen"
+        "icon": "NotebookPen",
+        "id": "expenses-and-income",
+        "details": "Each record connects an amount and currency with a date, account, and optional page, tags, or notes. Draft records keep unfinished entries separate from completed-transaction analysis."
       },
       {
         "title": "Quick & prompt entry",
@@ -24,7 +28,9 @@
           "Compact fields or structured prompt input.",
           "Suggested details remain editable before saving."
         ],
-        "icon": "TextCursorInput"
+        "icon": "TextCursorInput",
+        "id": "quick-and-prompt-entry",
+        "details": "Quick entry provides compact transaction fields. Prompt entry combines structured input, suggestions, and editable details, with a preferred input mode available in app settings."
       },
       {
         "title": "Accounts & sub-accounts",
@@ -32,7 +38,9 @@
           "Cash, cards, bank, and mobile banking records.",
           "Sub-accounts add another layer of organization."
         ],
-        "icon": "Wallet"
+        "icon": "Wallet",
+        "id": "accounts-and-sub-accounts",
+        "details": "Accounts represent recorded money in cash, bank accounts, cards, or mobile banking. Sub-accounts provide finer organization under a parent account, alongside balances, statements, and account history."
       },
       {
         "title": "Transfers & exchanges",
@@ -40,7 +48,9 @@
           "Money movements between recorded accounts.",
           "Both sides appear in balances and statements."
         ],
-        "icon": "ArrowLeftRight"
+        "icon": "ArrowLeftRight",
+        "id": "transfers-and-exchanges",
+        "details": "Transfers connect movements between accounts, while exchanges represent both currencies involved. Related entries keep their account context, and analysis treats these movements separately from income and expenses."
       },
       {
         "title": "Multiple currencies",
@@ -48,7 +58,9 @@
           "Currency-specific records and balances.",
           "Spending analysis retains its currency context."
         ],
-        "icon": "Coins"
+        "icon": "Coins",
+        "id": "multiple-currencies",
+        "details": "Currencies retain their own records, balances, and analysis. Exchange records connect the two sides of a currency movement, while each collaboration group has one configured currency."
       },
       {
         "title": "Loans & repayments",
@@ -56,7 +68,9 @@
           "Money lent and borrowed, organized by contact.",
           "Repayments and history accompany each loan."
         ],
-        "icon": "Handshake"
+        "icon": "Handshake",
+        "id": "loans-and-repayments",
+        "details": "Loan Management brings lending, borrowing, contacts, and related repayments into one overview. Loans can be recorded before a contact is attached, with repayment activity preserved in their history."
       },
       {
         "title": "Tags & notes",
@@ -64,7 +78,9 @@
           "Categories and context alongside transactions.",
           "Tagged records connect to budgets and analysis."
         ],
-        "icon": "Tags"
+        "icon": "Tags",
+        "id": "tags-and-notes",
+        "details": "Manual tags organize transactions for retrieval and comparison. Notes preserve additional context, and the same categories can support budget limits and breakdowns in transaction analysis."
       }
     ]
   },
@@ -77,7 +93,9 @@
           "Weekly, monthly, and yearly spending limits.",
           "Overall and category progress show what remains."
         ],
-        "icon": "ChartPie"
+        "icon": "ChartPie",
+        "id": "flexible-budgets",
+        "details": "Budgets support individual or repeating periods with overall and category limits. Spent amounts, remaining room, progress, and estimates connect the plan to its underlying financial records."
       },
       {
         "title": "Savings goals",
@@ -85,7 +103,9 @@
           "Targets, deadlines, and regular saving plans.",
           "Emergency funds and future costs have a place too."
         ],
-        "icon": "Target"
+        "icon": "Target",
+        "id": "savings-goals",
+        "details": "Goals support simple targets, deadlines, regular saving, emergency funds, and recurring future costs. Contributions and withdrawals are recorded, while progress and pace reflect the goal type and available financial history."
       },
       {
         "title": "Scheduled expenses",
@@ -93,7 +113,9 @@
           "Due dates and recurrence for expected costs.",
           "Payment records and reminders follow each period."
         ],
-        "icon": "CalendarDays"
+        "icon": "CalendarDays",
+        "id": "scheduled-expenses",
+        "details": "Scheduled costs have amounts, due dates, and recurring periods. Upcoming and overdue occurrences accompany recorded payments and history; reminder notifications depend on device permissions and configuration."
       },
       {
         "title": "Planned spending",
@@ -101,7 +123,9 @@
           "To-do pages hold intended expenses.",
           "Completed items connect to transaction entry."
         ],
-        "icon": "ListChecks"
+        "icon": "ListChecks",
+        "id": "planned-spending",
+        "details": "To-do pages separate intended spending from completed records. Planned items hold amounts and transaction details, with supported reminders and a completion flow through transaction entry."
       },
       {
         "title": "Dashboard & charts",
@@ -109,7 +133,9 @@
           "Summaries and trends across recorded activity.",
           "Period breakdowns reveal spending patterns."
         ],
-        "icon": "ChartNoAxesColumnIncreasing"
+        "icon": "ChartNoAxesColumnIncreasing",
+        "id": "dashboard-and-charts",
+        "details": "Dashboard summaries and daily, weekly, or monthly trends reflect completed records. Grouped breakdowns, rankings, and currency-specific views connect the bigger picture with the activity behind it."
       },
       {
         "title": "Search & filters",
@@ -117,7 +143,9 @@
           "Transaction search with flexible filter chips.",
           "Matching records explain the figures behind totals."
         ],
-        "icon": "Search"
+        "icon": "Search",
+        "id": "search-and-filters",
+        "details": "Search and filter chips narrow records by their available details. Matching transaction lists, counts, and totals bring individual entries into the same view as their financial summary."
       },
       {
         "title": "Statements & history",
@@ -125,7 +153,9 @@
           "Account statements and balance history.",
           "Related movements keep their financial context."
         ],
-        "icon": "History"
+        "icon": "History",
+        "id": "statements-and-history",
+        "details": "Statements connect transactions to the account they affect. Balance history follows recorded changes over time, including related transfers and exchanges, with the underlying activity available for inspection."
       },
       {
         "title": "Connected accounting",
@@ -133,7 +163,9 @@
           "A double-entry foundation connects records.",
           "Account movements and balances belong together."
         ],
-        "icon": "GitCompareArrows"
+        "icon": "GitCompareArrows",
+        "id": "connected-accounting",
+        "details": "Cartera uses a connected double-entry structure beneath its notebook interface. Related account movements and balances preserve the financial context of entered records while pages organize their everyday purpose."
       }
     ]
   },
@@ -146,7 +178,9 @@
           "Personal records live in the app’s local database.",
           "Everyday recordkeeping is available offline."
         ],
-        "icon": "HardDrive"
+        "icon": "HardDrive",
+        "id": "local-and-offline-records",
+        "details": "Personal records use local storage for everyday recordkeeping. Cloud synchronization, AI tools, and group updates add online capabilities according to available access and service configuration."
       },
       {
         "title": "Backup & restore",
@@ -154,7 +188,9 @@
           "Local backup files preserve personal records.",
           "Restore is available during app setup."
         ],
-        "icon": "ArchiveRestore"
+        "icon": "ArchiveRestore",
+        "id": "backup-and-restore",
+        "details": "Backup creation saves a local file through the system file picker. During onboarding, restore includes backup verification and progress feedback before the personal notebook is ready."
       },
       {
         "title": "App password & lock",
@@ -162,7 +198,9 @@
           "Password protection for access to the app.",
           "Automatic lock timing fits recording habits."
         ],
-        "icon": "LockKeyhole"
+        "icon": "LockKeyhole",
+        "id": "app-password-and-lock",
+        "details": "An app password protects access to the financial notebook. Configurable automatic lock timing fits recording habits, with availability of security actions subject to the app’s account mode."
       },
       {
         "title": "Language & preferences",
@@ -170,7 +208,9 @@
           "App language, currency, and entry defaults.",
           "Daily entry reminders support a regular habit."
         ],
-        "icon": "Languages"
+        "icon": "Languages",
+        "id": "language-and-preferences",
+        "details": "Language preferences can follow the device or use an app selection. Default currency, page, and input mode shape transaction entry, with daily reminders subject to notification permissions."
       }
     ]
   },
@@ -183,7 +223,9 @@
           "Personal records synchronized across Android devices.",
           "Sync status reflects available online access."
         ],
-        "icon": "Cloud"
+        "icon": "Cloud",
+        "id": "cloud-sync",
+        "details": "Eligible access supports synchronization of personal records between Android devices. The app provides sync status, with availability determined by the current plan and service configuration."
       },
       {
         "title": "Voice & image entry",
@@ -191,7 +233,9 @@
           "Recognition from voice notes and selected images.",
           "Extracted transaction details remain editable."
         ],
-        "icon": "ScanLine"
+        "icon": "ScanLine",
+        "id": "voice-and-image-entry",
+        "details": "Supported recognition flows accept voice notes or selected and cropped images. Extracted details remain editable before saving; processing uses external AI providers and eligible online access."
       },
       {
         "title": "Cartera assistant",
@@ -199,7 +243,9 @@
           "Record lookups and summaries through chat.",
           "Supported records and plans can be created or edited."
         ],
-        "icon": "MessagesSquare"
+        "icon": "MessagesSquare",
+        "id": "cartera-assistant",
+        "details": "The assistant supports transaction totals, lookups, and creation or editing of supported records, accounts, pages, and plans. Confirmation is included for sensitive actions; messages and relevant records use external AI processing."
       },
       {
         "title": "Automatic tagging",
@@ -207,7 +253,9 @@
           "AI category tags for eligible transactions.",
           "Availability follows configuration and allowances."
         ],
-        "icon": "Sparkles"
+        "icon": "Sparkles",
+        "id": "automatic-tagging",
+        "details": "When enabled, background AI tagging applies ordinary category tags to eligible records. Access and processing follow authentication, service configuration, and usage allowances."
       },
       {
         "title": "Shared costs & settlements",
@@ -215,7 +263,9 @@
           "Group expenses with equal or custom shares.",
           "Recorded settlements explain who owes whom."
         ],
-        "icon": "Scale"
+        "icon": "Scale",
+        "id": "shared-costs-and-settlements",
+        "details": "Groups record personally paid expenses with equal or custom shares. Balances and settlement history explain amounts owed between participants, with shared visibility determined by group permissions."
       },
       {
         "title": "Shared funds",
@@ -223,7 +273,9 @@
           "Contributions and expenses in a group fund.",
           "Balances and activity connect members’ records."
         ],
-        "icon": "Users"
+        "icon": "Users",
+        "id": "shared-funds",
+        "details": "A shared fund connects contributions, group-funded expenses, balances, and activity. Member access follows permissions, with the ledger preserving records of the group’s financial activity."
       },
       {
         "title": "Dues & collections",
@@ -231,7 +283,9 @@
           "Recurring charges and full or partial payment records.",
           "Member and customer statements show what is owed."
         ],
-        "icon": "ReceiptText"
+        "icon": "ReceiptText",
+        "id": "dues-and-collections",
+        "details": "Member or customer rosters connect charges with full or partial payment records. Recurring collection periods, individual statements, and outstanding balances keep collection history organized."
       },
       {
         "title": "Group access & history",
@@ -239,7 +293,9 @@
           "Membership and permissions shape shared access.",
           "Group activity preserves a shared financial record."
         ],
-        "icon": "UserRoundCheck"
+        "icon": "UserRoundCheck",
+        "id": "group-access-and-history",
+        "details": "Memberships and permissions determine participation and record visibility. Group updates require internet access, each group uses one configured currency, and available activity preserves its shared record."
       }
     ]
   }

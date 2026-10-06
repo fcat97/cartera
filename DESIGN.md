@@ -209,7 +209,9 @@ The standard centered shell is capped at 1200px with 40px side gutters. At width
 
 Full-width section bands wrap the constrained content. Desktop feature stories use two columns; planning, shared-finance, and data sections use three columns. The hero uses `1.1fr 1fr`; notebook uses `1.15fr 1fr`; FAQ and contact use `.9fr 1.2fr`. These relationships collapse to one column up to 650px. On mobile the notebook explanation precedes its illustration.
 
-The feature overview is an open catalog on white, with a minimum height of the viewport minus the sticky header. Its 28 entries are grouped into everyday records, planning, personal settings, and online features; content grows naturally beyond that minimum. Four columns become two up to 900px, then one below 375px. Circular icon badges sit above titles and two descriptive lines; the narrowest layout puts the circle beside the text. There are no card containers or hidden entries. The Features anchor targets this catalog.
+The homepage feature overview is a compact title index on white, with a minimum height of the viewport minus the sticky header. Its 28 pale cards use six columns on desktop, four up to 1100px, three up to 900px, and two up to 650px. Descriptions live on `/features`, reached through the “See details” link or a feature title. Individual titles link directly to their description anchors. The homepage Features anchor targets this compact index.
+
+The dedicated features page groups all 28 description cards into everyday records, planning, personal settings, and online features. Four columns become three up to 1100px, two up to 900px, and one up to 650px. Category links, a breadcrumb, and a return-to-overview link support navigation. Header and footer Features links target this page.
 
 Recurring section padding is 100px vertically, decreasing to 75px up to 900px and 60px up to 650px. Local hero, contact, data, footer, and final-download spacing remains explicit. Grid gaps and component padding use the observed values recorded in frontmatter, with component-specific adaptations rather than an invented uniform scale.
 
@@ -232,7 +234,7 @@ Most content uses tonal layering and fine borders. Planning cards and shared car
 
 Surfaces have gentle curves: fields and the notebook spine use 7px corners; inset sample panels use 8px; download actions use 9px; planning cards and illustrative pages use 12px; shared cards and assistant notes use 14px. The data surface uses 15px and final download panel 17px. Carousel controls are circles, with small round slide markers.
 
-Feature catalog badges are 88px circles on desktop, 72px on mobile, and 56px beside text on the narrowest phones. Pale mint (`#edf7f1`) alternates with the warm neutral section color; green Lucide icons use a consistent 1.5px stroke. Feature descriptions remain readable text outside the circles.
+Feature title and description cards use a pale neutral (`#f8faf8`), a fine border, and 12px corners. Homepage cards contain only a centered title with an 84px minimum height; hover and keyboard focus introduce pale mint (`#edf7f1`). Description cards have 24px padding, green Lucide icons with a consistent 1.5px stroke, and 15px reading text. Directly linked descriptions receive the same pale mint treatment through `:target`.
 
 The phone has a distinct device silhouette (33px outer corners and 24px image/viewport corners on desktop), reducing at narrower widths. Notebook illustrations use overlapping pages, light borders, and restrained rotations. The hero underline has an irregular curved shape and stays attached to the highlighted phrase.
 

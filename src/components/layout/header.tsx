@@ -7,7 +7,7 @@ import { Menu, X } from 'lucide-react';
 import { PlayStoreLink } from '@/components/play-store-link';
 
 const navigation = [
-  { href: '/#features', label: 'Features' },
+  { href: '/features', label: 'Features' },
   { href: '/#shared-finances', label: 'Shared finances' },
   { href: '/#faq', label: 'FAQ' },
   { href: '/blogs', label: 'Blog' },

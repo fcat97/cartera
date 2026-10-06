@@ -12,7 +12,7 @@ npm run seo:check
 
 Run the build with the development server stopped: both use `.next/`. Restart `npm run dev` after production verification. The export is in `out/`.
 
-The SEO check reads the exported HTML, sitemap, and robots.txt. It verifies unique titles and descriptions, matching canonical and Open Graph URLs, local social images, one primary heading per page, parseable JSON-LD, factual app metadata, article publication dates, breadcrumbs, internal links, and an unindexed 404 page. CI runs this check before uploading the Pages artifact. It does not simulate Google indexing or assign a Lighthouse score.
+The SEO check reads the exported HTML, sitemap, and robots.txt. It verifies unique titles and descriptions, matching canonical and Open Graph URLs, local social images, one primary heading per page, parseable JSON-LD, factual app metadata, article publication dates, breadcrumbs, internal links and section anchors, and an unindexed 404 page. The `/features` collection also checks its structured feature count and description anchors. CI runs this check before uploading the Pages artifact. It does not simulate Google indexing or assign a Lighthouse score.
 
 ## Publication checks
 

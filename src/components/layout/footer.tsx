@@ -16,7 +16,7 @@ export function Footer() {
             <p>A little structure for everyday money.</p>
           </div>
           <nav aria-label="Footer navigation" className="footer-navigation">
-            <Link href="/#features">Features</Link>
+            <Link href="/features">Features</Link>
             <Link href="/blogs">Blog</Link>
             <Link href="/#contact">Contact</Link>
             <Link href="/privacy-policy">Privacy policy</Link>
