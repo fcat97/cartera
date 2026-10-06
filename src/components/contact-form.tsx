@@ -7,11 +7,13 @@ import { createSupportEmailDraft, SUPPORT_EMAIL } from '@/lib/contact-email';
 
 export function ContactForm() {
   const [error, setError] = useState('');
+  const [invalidField, setInvalidField] = useState<string | null>(null);
   const [draftOpened, setDraftOpened] = useState(false);
 
   function openDraft(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError('');
+    setInvalidField(null);
     setDraftOpened(false);
     const formData = new FormData(event.currentTarget);
     const result = contactSchema.safeParse({
@@ -20,7 +22,11 @@ export function ContactForm() {
       message: String(formData.get('message') ?? '').trim(),
     });
     if (!result.success) {
+      const fieldName = String(result.error.issues[0]?.path[0] ?? '');
       setError(result.error.issues[0]?.message ?? 'Check your details and try again.');
+      setInvalidField(fieldName);
+      const field = event.currentTarget.elements.namedItem(fieldName);
+      if (field instanceof HTMLElement) field.focus();
       return;
     }
     window.location.href = createSupportEmailDraft(result.data);
@@ -28,20 +34,20 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={openDraft} className="contact-form" aria-label="Prepare a support email">
+    <form onSubmit={openDraft} className="contact-form" aria-label="Prepare a support email" onInput={() => { setError(''); setInvalidField(null); setDraftOpened(false); }}>
       <div className="contact-form-row">
         <div className="form-field">
           <label htmlFor="contact-name">Your name</label>
-          <input id="contact-name" name="name" autoComplete="name" placeholder="Alex" required minLength={2} maxLength={100} />
+          <input id="contact-name" name="name" autoComplete="name" placeholder="Alex" required minLength={2} maxLength={100} aria-invalid={invalidField === 'name' || undefined} aria-describedby={invalidField === 'name' ? 'contact-feedback' : undefined} />
         </div>
         <div className="form-field">
           <label htmlFor="contact-email">Email address</label>
-          <input id="contact-email" name="email" autoComplete="email" type="email" placeholder="alex@example.com" required maxLength={254} />
+          <input id="contact-email" name="email" autoComplete="email" type="email" placeholder="alex@example.com" required maxLength={254} aria-invalid={invalidField === 'email' || undefined} aria-describedby={invalidField === 'email' ? 'contact-feedback' : undefined} />
         </div>
       </div>
       <div className="form-field">
         <label htmlFor="contact-message">How can we help?</label>
-        <textarea id="contact-message" name="message" placeholder="Questions, feedback, or a feature suggestion…" rows={4} required minLength={10} maxLength={2000} aria-describedby="contact-note contact-feedback" />
+        <textarea id="contact-message" name="message" placeholder="Questions, feedback, or a feature suggestion…" rows={4} required minLength={10} maxLength={2000} aria-invalid={invalidField === 'message' || undefined} aria-describedby="contact-note contact-feedback" />
       </div>
       <button type="submit" className="play-store-link contact-submit"><Mail size={18} aria-hidden="true" /> Open email draft <ArrowUpRight size={17} aria-hidden="true" /></button>
       <p className="form-note" id="contact-note">This form prepares a draft in your email app. Direct email: <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.</p>

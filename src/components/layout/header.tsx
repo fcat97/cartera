@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Menu, X } from 'lucide-react';
 import { PlayStoreLink } from '@/components/play-store-link';
 
@@ -16,6 +16,15 @@ const navigation = [
 export function Header() {
   const menu = useRef<HTMLDetailsElement>(null);
   const closeMenu = () => menu.current?.removeAttribute('open');
+  useEffect(() => {
+    const closeOutside = (event: PointerEvent) => {
+      if (event.target instanceof Node && !menu.current?.contains(event.target)) {
+        menu.current?.removeAttribute('open');
+      }
+    };
+    document.addEventListener('pointerdown', closeOutside);
+    return () => document.removeEventListener('pointerdown', closeOutside);
+  }, []);
   return (
     <header className="site-header">
       <div className="site-shell header-inner">
