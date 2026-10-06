@@ -65,7 +65,7 @@ export function HeroScreenshotCarousel() {
   }
 
   return (
-    <figure ref={figureRef} className="hero-visual" role="region" aria-roledescription="carousel" aria-label="Cartera app screenshots"
+    <figure ref={figureRef} className="hero-visual" data-motion="hero-notebook" role="region" aria-roledescription="carousel" aria-label="Cartera app screenshots"
       onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}
       onFocusCapture={() => setFocused(true)} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); }}
       onKeyDown={event => {

@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, BookOpen, NotebookPen, Wallet, ChartNoAxesCol
 import { PlayStoreLink } from '@/components/play-store-link';
 import { ContactForm } from '@/components/contact-form';
 import { HeroScreenshotCarousel } from '@/components/hero-screenshot-carousel';
+import { HomeMotion } from '@/components/home-motion';
 import { SITE_DESCRIPTION, SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -43,8 +44,9 @@ const everydayTools = [
 export default function Home() {
   return (
     <div className="home-page">
+      <HomeMotion />
       <section className="hero site-shell" aria-labelledby="hero-title">
-        <div className="hero-copy">
+        <div className="hero-copy" data-motion="hero-ink">
           <p className="eyebrow"><span className="eyebrow-dot" /> Your everyday financial notebook</p>
           <h1 id="hero-title">Your money,<br />organized for<br /><span className="ink-underline">real life.</span></h1>
           <p className="hero-description">Cartera brings everyday spending, budgets, savings goals, and shared finances into one Android app. Notebook-style pages and connected accounts give every part of life its own place.</p>
@@ -77,7 +79,7 @@ export default function Home() {
       </section>
 
       <section id="features" className="notebook-section site-shell section-space" aria-labelledby="notebook-title">
-        <div className="notebook-illustration" role="group" aria-label="Example notebook pages for home, travel, and a freelance project">
+        <div className="notebook-illustration" data-motion="pages" role="group" aria-label="Example notebook pages for home, travel, and a freelance project">
           <div className="book-spine"><BookOpen size={18} aria-hidden="true" /><span>The everyday book</span><span>3 pages</span></div>
           <div className="example-pages">
             <div className="paper-page paper-page--mint"><House size={24} strokeWidth={1.4} aria-hidden="true" /><span className="page-kicker">01 / HOME</span><h3>October<br />expenses</h3><div className="page-entry"><span>Groceries</span><span>$120</span></div><div className="page-entry"><span>Utilities</span><span>$60</span></div><div className="page-entry"><span>Lunch</span><span>$15</span></div><span className="page-total">The everyday stuff.</span></div>
@@ -107,11 +109,11 @@ export default function Home() {
           <div className="planning-grid">
             <article className="planning-card">
               <span className="feature-index">01 / SPENDING</span><h3>Budgets that fit your life</h3><p>Weekly, monthly, and yearly budgets combine overall or category limits with spending progress and remaining amounts.</p>
-              <div className="sample-panel"><div className="sample-title"><ShoppingBasket size={23} aria-hidden="true" /><span>Monthly groceries</span></div><div className="sample-amount"><span><strong>$120</strong> of $200</span><span>60%</span></div><div className="sample-progress"><span style={{ width: '60%' }} /></div><p>$80 of room left in the plan</p></div>
+              <div className="sample-panel"><div className="sample-title"><ShoppingBasket size={23} aria-hidden="true" /><span>Monthly groceries</span></div><div className="sample-amount"><span><strong>$120</strong> of $200</span><span>60%</span></div><div className="sample-progress" data-motion="progress"><span style={{ width: '60%' }} /></div><p>$80 of room left in the plan</p></div>
             </article>
             <article className="planning-card">
               <span className="feature-index">02 / SAVING</span><h3>Flexible savings goals</h3><p>Savings goals support targets, deadlines, regular contributions, emergency funds, and recurring future costs.</p>
-              <div className="sample-panel sample-panel--saving"><div className="sample-title"><Plane size={23} aria-hidden="true" /><span>Weekend trip</span></div><div className="sample-amount"><span><strong>$80</strong> of $200</span><span>40%</span></div><div className="sample-progress"><span style={{ width: '40%' }} /></div><p>A little closer with every contribution</p></div>
+              <div className="sample-panel sample-panel--saving"><div className="sample-title"><Plane size={23} aria-hidden="true" /><span>Weekend trip</span></div><div className="sample-amount"><span><strong>$80</strong> of $200</span><span>40%</span></div><div className="sample-progress" data-motion="progress"><span style={{ width: '40%' }} /></div><p>A little closer with every contribution</p></div>
             </article>
             <article className="planning-card">
               <span className="feature-index">03 / UPCOMING</span><h3>Scheduled expenses</h3><p>Scheduled expenses include due dates, recurring periods, recorded payments, and reminders subject to device permissions.</p>

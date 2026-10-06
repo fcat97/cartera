@@ -7,6 +7,7 @@ The draft follows the approved ivory, forest-green, and notebook visual directio
 - Marketing copy describes the product’s capabilities and benefits in declarative language. Feature sections and FAQs focus on the offering; action labels remain clear.
 - Rebuilt the homepage around everyday finances, books and pages, accounts, recording and analysis, budgets, savings goals, scheduled expenses, loans, and the three shared-finance jobs.
 - Added nearby access and connectivity notes for collaboration, cloud sync, voice/images, and the assistant. External AI processing is disclosed beside the assistant story.
+- Added a notebook-themed motion sequence: an ink underline, phone/notebook settling, pages fanning into place, and illustrative progress filling on first view. Interaction feedback covers navigation, buttons, forms, and FAQ opening. Motion is disabled for reduced-motion preferences, one-shot sequences run once, and active sequences stop when the document is hidden.
 - Added responsive navigation, keyboard focus and skip navigation, expandable FAQs, reduced-motion support, and contact validation.
 - The contact form opens a properly encoded email draft. It never claims a message was delivered. Visitors send it in their email app; a direct email link is also provided.
 - Kept blog and legal URLs and existing legal text. Updated metadata, sitemap, robots, blog canonicals, and structured-data URLs to https://cartera.yellowbytes.dev.
