@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight, BookOpen, NotebookPen, Wallet, ChartNoAxesColumnIncreasing, Plane, House, BriefcaseBusiness, ShoppingBasket, CalendarDays, CircleCheck, Handshake, Users, ReceiptText, Mic, ImagePlus, HardDrive, LockKeyhole, Cloud, Tags, Coins, Search, Plus, Minus } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, BookOpen, NotebookPen, Wallet, Plane, House, BriefcaseBusiness, ShoppingBasket, CalendarDays, CircleCheck, Handshake, Users, ReceiptText, Mic, ImagePlus, HardDrive, LockKeyhole, Cloud, Tags, Coins, Search, Plus, Minus } from 'lucide-react';
 import { PlayStoreLink } from '@/components/play-store-link';
 import { ContactForm } from '@/components/contact-form';
 import { HeroScreenshotCarousel } from '@/components/hero-screenshot-carousel';
@@ -9,6 +9,7 @@ import { createPageMetadata } from '@/lib/seo';
 import { generateAppSchema } from '@/lib/structured-data';
 import { JsonLd } from '@/components/json-ld';
 import { SharedLedgerIllustration } from '@/components/shared-ledger-illustration';
+import { FeaturesOverview } from '@/components/features-overview';
 
 export const metadata = createPageMetadata({ title: SITE_TITLE, description: SITE_DESCRIPTION, path: '/' });
 
@@ -53,27 +54,10 @@ export default function Home() {
       </section>
       </div>
 
-      <section className="how-it-works site-shell" aria-labelledby="how-title">
-        <div className="section-heading">
-
-          <h2 id="how-title">Everyday finances, brought together.</h2>
-        </div>
-        <div className="steps-grid">
-          {[
-            { icon: BookOpen, title: 'Books & pages', body: 'Notebook-style organization for months, trips, households, and projects.' },
-            { icon: NotebookPen, title: 'Transaction records', body: 'Expenses, income, transfers, currency exchanges, and loans in one place.' },
-            { icon: ChartNoAxesColumnIncreasing, title: 'Analysis & planning', body: 'Spending trends, budgets, savings goals, and scheduled expenses.' },
-          ].map(({ icon: Icon, title, body }) => (
-            <div className="step" key={title}>
-              <Icon size={38} strokeWidth={1.3} aria-hidden="true" />
-              <div><h3>{title}</h3><p>{body}</p></div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <FeaturesOverview />
 
       <div className="section-band section-band--soft">
-      <section id="features" className="notebook-section site-shell section-space" aria-labelledby="notebook-title">
+      <section className="notebook-section site-shell section-space" aria-labelledby="notebook-title">
         <div className="notebook-illustration" data-motion="pages" role="group" aria-label="Example notebook pages for home, travel, and a freelance project">
           <div className="book-spine"><BookOpen size={18} aria-hidden="true" /><span>The everyday book</span><span>3 pages</span></div>
           <div className="example-pages">

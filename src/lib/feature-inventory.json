@@ -1,0 +1,246 @@
+[
+  {
+    "title": "Everyday records",
+    "features": [
+      {
+        "title": "Books & pages",
+        "lines": [
+          "Notebook spaces for months, trips, and projects.",
+          "Related pages belong together in books."
+        ],
+        "icon": "BookOpen"
+      },
+      {
+        "title": "Expenses & income",
+        "lines": [
+          "Everyday spending and earnings in one record.",
+          "Amounts, dates, and accounts stay connected."
+        ],
+        "icon": "NotebookPen"
+      },
+      {
+        "title": "Quick & prompt entry",
+        "lines": [
+          "Compact fields or structured prompt input.",
+          "Suggested details remain editable before saving."
+        ],
+        "icon": "TextCursorInput"
+      },
+      {
+        "title": "Accounts & sub-accounts",
+        "lines": [
+          "Cash, cards, bank, and mobile banking records.",
+          "Sub-accounts add another layer of organization."
+        ],
+        "icon": "Wallet"
+      },
+      {
+        "title": "Transfers & exchanges",
+        "lines": [
+          "Money movements between recorded accounts.",
+          "Both sides appear in balances and statements."
+        ],
+        "icon": "ArrowLeftRight"
+      },
+      {
+        "title": "Multiple currencies",
+        "lines": [
+          "Currency-specific records and balances.",
+          "Spending analysis retains its currency context."
+        ],
+        "icon": "Coins"
+      },
+      {
+        "title": "Loans & repayments",
+        "lines": [
+          "Money lent and borrowed, organized by contact.",
+          "Repayments and history accompany each loan."
+        ],
+        "icon": "Handshake"
+      },
+      {
+        "title": "Tags & notes",
+        "lines": [
+          "Categories and context alongside transactions.",
+          "Tagged records connect to budgets and analysis."
+        ],
+        "icon": "Tags"
+      }
+    ]
+  },
+  {
+    "title": "Planning & perspective",
+    "features": [
+      {
+        "title": "Flexible budgets",
+        "lines": [
+          "Weekly, monthly, and yearly spending limits.",
+          "Overall and category progress show what remains."
+        ],
+        "icon": "ChartPie"
+      },
+      {
+        "title": "Savings goals",
+        "lines": [
+          "Targets, deadlines, and regular saving plans.",
+          "Emergency funds and future costs have a place too."
+        ],
+        "icon": "Target"
+      },
+      {
+        "title": "Scheduled expenses",
+        "lines": [
+          "Due dates and recurrence for expected costs.",
+          "Payment records and reminders follow each period."
+        ],
+        "icon": "CalendarDays"
+      },
+      {
+        "title": "Planned spending",
+        "lines": [
+          "To-do pages hold intended expenses.",
+          "Completed items connect to transaction entry."
+        ],
+        "icon": "ListChecks"
+      },
+      {
+        "title": "Dashboard & charts",
+        "lines": [
+          "Summaries and trends across recorded activity.",
+          "Period breakdowns reveal spending patterns."
+        ],
+        "icon": "ChartNoAxesColumnIncreasing"
+      },
+      {
+        "title": "Search & filters",
+        "lines": [
+          "Transaction search with flexible filter chips.",
+          "Matching records explain the figures behind totals."
+        ],
+        "icon": "Search"
+      },
+      {
+        "title": "Statements & history",
+        "lines": [
+          "Account statements and balance history.",
+          "Related movements keep their financial context."
+        ],
+        "icon": "History"
+      },
+      {
+        "title": "Connected accounting",
+        "lines": [
+          "A double-entry foundation connects records.",
+          "Account movements and balances belong together."
+        ],
+        "icon": "GitCompareArrows"
+      }
+    ]
+  },
+  {
+    "title": "Personal by design",
+    "features": [
+      {
+        "title": "Local & offline records",
+        "lines": [
+          "Personal records live in the app’s local database.",
+          "Everyday recordkeeping is available offline."
+        ],
+        "icon": "HardDrive"
+      },
+      {
+        "title": "Backup & restore",
+        "lines": [
+          "Local backup files preserve personal records.",
+          "Restore is available during app setup."
+        ],
+        "icon": "ArchiveRestore"
+      },
+      {
+        "title": "App password & lock",
+        "lines": [
+          "Password protection for access to the app.",
+          "Automatic lock timing fits recording habits."
+        ],
+        "icon": "LockKeyhole"
+      },
+      {
+        "title": "Language & preferences",
+        "lines": [
+          "App language, currency, and entry defaults.",
+          "Daily entry reminders support a regular habit."
+        ],
+        "icon": "Languages"
+      }
+    ]
+  },
+  {
+    "title": "Connected possibilities",
+    "features": [
+      {
+        "title": "Cloud sync",
+        "lines": [
+          "Personal records synchronized across Android devices.",
+          "Sync status reflects available online access."
+        ],
+        "icon": "Cloud"
+      },
+      {
+        "title": "Voice & image entry",
+        "lines": [
+          "Recognition from voice notes and selected images.",
+          "Extracted transaction details remain editable."
+        ],
+        "icon": "ScanLine"
+      },
+      {
+        "title": "Cartera assistant",
+        "lines": [
+          "Record lookups and summaries through chat.",
+          "Supported records and plans can be created or edited."
+        ],
+        "icon": "MessagesSquare"
+      },
+      {
+        "title": "Automatic tagging",
+        "lines": [
+          "AI category tags for eligible transactions.",
+          "Availability follows configuration and allowances."
+        ],
+        "icon": "Sparkles"
+      },
+      {
+        "title": "Shared costs & settlements",
+        "lines": [
+          "Group expenses with equal or custom shares.",
+          "Recorded settlements explain who owes whom."
+        ],
+        "icon": "Scale"
+      },
+      {
+        "title": "Shared funds",
+        "lines": [
+          "Contributions and expenses in a group fund.",
+          "Balances and activity connect members’ records."
+        ],
+        "icon": "Users"
+      },
+      {
+        "title": "Dues & collections",
+        "lines": [
+          "Recurring charges and full or partial payment records.",
+          "Member and customer statements show what is owed."
+        ],
+        "icon": "ReceiptText"
+      },
+      {
+        "title": "Group access & history",
+        "lines": [
+          "Membership and permissions shape shared access.",
+          "Group activity preserves a shared financial record."
+        ],
+        "icon": "UserRoundCheck"
+      }
+    ]
+  }
+]
