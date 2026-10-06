@@ -131,7 +131,10 @@
 .features-overview-heading > p { color: var(--quiet); font-size: 16px; line-height: 1.8; margin-top: 20px; }
 .feature-title-grid { list-style: none; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
 .feature-title-grid > li { min-width: 0; display: flex; }
-.feature-title-card { width: 100%; min-height: 84px; display: flex; align-items: center; justify-content: center; padding: 18px 14px; border: 1px solid var(--line); border-radius: 12px; background: #f8faf8; color: var(--ink); text-align: center; text-wrap: balance; font-size: 15px; font-weight: 600; line-height: 1.5; transition: background 160ms ease, border-color 160ms ease; }
+.feature-title-card { width: 100%; min-height: 124px; display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: center; padding: 16px 14px; border: 1px solid var(--line); border-radius: 12px; background: #f8faf8; color: var(--ink); text-align: center; text-wrap: balance; font-size: 15px; font-weight: 600; line-height: 1.5; transition: background 160ms ease, border-color 160ms ease; }
+.feature-duotone-icon { flex-shrink: 0; display: block; width: 40px; height: 40px; }
+.feature-title-card .feature-duotone-icon { width: 36px; height: 36px; }
+.feature-title-text { min-height: 45px; display: flex; align-items: center; }
 .feature-title-card:hover, .feature-title-card:focus-visible { background: #edf7f1; border-color: #8ea99a; }
 .features-overview-footer { display: flex; justify-content: center; margin-top: 32px; }
 .feature-details-link { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 48px; border: 1px solid var(--green); border-radius: 9px; padding: 13px 22px; color: var(--green); font-size: 15px; font-weight: 600; transition: background 160ms ease; }
@@ -631,6 +634,8 @@
   .features-overview-heading > p { font-size: 15px; margin-top: 18px; }
   .feature-title-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .feature-title-card { padding-inline: 12px; font-size: 14px; }
+  .feature-title-card .feature-duotone-icon { width: 32px; height: 32px; }
+  .feature-title-text { min-height: 42px; }
   .features-overview-footer { margin-top: 28px; }
   .features-page { padding-block: 24px 52px; }
   .features-page-heading { margin-bottom: 44px; }

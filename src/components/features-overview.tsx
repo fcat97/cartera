@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import inventory from '@/lib/feature-inventory.json';
+import { FeatureIcon } from '@/components/feature-icon';
 
 export function FeaturesOverview() {
   return (
@@ -13,7 +14,8 @@ export function FeaturesOverview() {
         {inventory.flatMap(group => group.features).map(feature => (
           <li key={feature.id}>
             <Link href={`/features#${feature.id}`} className="feature-title-card">
-              {feature.title}
+              <FeatureIcon name={feature.icon} />
+              <span className="feature-title-text">{feature.title}</span>
             </Link>
           </li>
         ))}

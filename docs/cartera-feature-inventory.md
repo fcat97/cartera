@@ -62,6 +62,6 @@ Upcoming or unverified tax tools, live currency rates, PDF/Excel reports, spread
 
 ## Presentation
 
-The homepage shows all 28 feature titles in compact, pale cards on a white background. Six columns on desktop reduce to four, three, and two as the available width decreases. Each title links to its description on `/features`; a single “See details” link opens the full collection. The overview contains no descriptions or screenshots.
+The homepage shows all 28 feature titles with colorful Phosphor duotone icons in compact, pale cards on a white background. Six columns on desktop reduce to four, three, and two as the available width decreases. Each title links to its description on `/features`; a single “See details” link opens the full collection. The overview contains no descriptions or screenshots.
 
 The dedicated features page presents description cards in the four groups above. Four columns on desktop become three, two, and one on smaller screens. Each card includes its two-line summary and an additional source-backed explanation. Online access conditions appear alongside the online group, with feature-specific constraints in the relevant descriptions. Header and footer Features links point to the dedicated page; the homepage’s Explore the features link still targets the compact overview.

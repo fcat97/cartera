@@ -1,0 +1,142 @@
+{
+  "BookOpen": {
+    "src": "/icons/features/book-open-duotone.svg",
+    "icon": "book-open",
+    "color": "#2e7d59"
+  },
+  "NotebookPen": {
+    "src": "/icons/features/note-pencil-duotone.svg",
+    "icon": "note-pencil",
+    "color": "#357d8a"
+  },
+  "TextCursorInput": {
+    "src": "/icons/features/textbox-duotone.svg",
+    "icon": "textbox",
+    "color": "#566db1"
+  },
+  "Wallet": {
+    "src": "/icons/features/wallet-duotone.svg",
+    "icon": "wallet",
+    "color": "#ae762a"
+  },
+  "ArrowLeftRight": {
+    "src": "/icons/features/arrows-left-right-duotone.svg",
+    "icon": "arrows-left-right",
+    "color": "#3b8193"
+  },
+  "Coins": {
+    "src": "/icons/features/coins-duotone.svg",
+    "icon": "coins",
+    "color": "#ad792b"
+  },
+  "Handshake": {
+    "src": "/icons/features/handshake-duotone.svg",
+    "icon": "handshake",
+    "color": "#a86b49"
+  },
+  "Tags": {
+    "src": "/icons/features/tag-duotone.svg",
+    "icon": "tag",
+    "color": "#8460a5"
+  },
+  "ChartPie": {
+    "src": "/icons/features/chart-pie-slice-duotone.svg",
+    "icon": "chart-pie-slice",
+    "color": "#388069"
+  },
+  "Target": {
+    "src": "/icons/features/target-duotone.svg",
+    "icon": "target",
+    "color": "#bc654d"
+  },
+  "CalendarDays": {
+    "src": "/icons/features/calendar-check-duotone.svg",
+    "icon": "calendar-check",
+    "color": "#4e75ad"
+  },
+  "ListChecks": {
+    "src": "/icons/features/list-checks-duotone.svg",
+    "icon": "list-checks",
+    "color": "#8265a5"
+  },
+  "ChartNoAxesColumnIncreasing": {
+    "src": "/icons/features/chart-bar-duotone.svg",
+    "icon": "chart-bar",
+    "color": "#3c8292"
+  },
+  "Search": {
+    "src": "/icons/features/magnifying-glass-duotone.svg",
+    "icon": "magnifying-glass",
+    "color": "#4c77a7"
+  },
+  "History": {
+    "src": "/icons/features/clock-counter-clockwise-duotone.svg",
+    "icon": "clock-counter-clockwise",
+    "color": "#ae7b36"
+  },
+  "GitCompareArrows": {
+    "src": "/icons/features/git-branch-duotone.svg",
+    "icon": "git-branch",
+    "color": "#7968a4"
+  },
+  "HardDrive": {
+    "src": "/icons/features/hard-drives-duotone.svg",
+    "icon": "hard-drives",
+    "color": "#3d8590"
+  },
+  "ArchiveRestore": {
+    "src": "/icons/features/archive-duotone.svg",
+    "icon": "archive",
+    "color": "#a57934"
+  },
+  "LockKeyhole": {
+    "src": "/icons/features/lock-key-duotone.svg",
+    "icon": "lock-key",
+    "color": "#4f7d67"
+  },
+  "Languages": {
+    "src": "/icons/features/translate-duotone.svg",
+    "icon": "translate",
+    "color": "#8267a5"
+  },
+  "Cloud": {
+    "src": "/icons/features/cloud-arrow-up-duotone.svg",
+    "icon": "cloud-arrow-up",
+    "color": "#517eb4"
+  },
+  "ScanLine": {
+    "src": "/icons/features/scan-duotone.svg",
+    "icon": "scan",
+    "color": "#388b80"
+  },
+  "MessagesSquare": {
+    "src": "/icons/features/chat-circle-dots-duotone.svg",
+    "icon": "chat-circle-dots",
+    "color": "#8266a8"
+  },
+  "Sparkles": {
+    "src": "/icons/features/sparkle-duotone.svg",
+    "icon": "sparkle",
+    "color": "#b38429"
+  },
+  "Scale": {
+    "src": "/icons/features/scales-duotone.svg",
+    "icon": "scales",
+    "color": "#4b80a3"
+  },
+  "Users": {
+    "src": "/icons/features/users-three-duotone.svg",
+    "icon": "users-three",
+    "color": "#4d8767"
+  },
+  "ReceiptText": {
+    "src": "/icons/features/receipt-duotone.svg",
+    "icon": "receipt",
+    "color": "#af7450"
+  },
+  "UserRoundCheck": {
+    "src": "/icons/features/user-circle-check-duotone.svg",
+    "icon": "user-circle-check",
+    "color": "#8367a6"
+  }
+}
