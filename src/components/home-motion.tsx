@@ -41,6 +41,15 @@ export function HomeMotion() {
         case 'progress':
           animate(element.querySelector('span'), [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], 0, 750);
           break;
+        case 'shared-ledger':
+          element.querySelectorAll('.shared-connector').forEach((line, index) => {
+            animate(line, [{ strokeDasharray: '1', strokeDashoffset: '1' }, { strokeDasharray: '1', strokeDashoffset: '0' }], index * 80, 700);
+          });
+          element.querySelectorAll('.shared-person').forEach((person, index) => {
+            animate(person, [{ transform: 'translateY(9px)', opacity: .65 }, { transform: 'none', opacity: 1 }], index * 80, 600);
+          });
+          animate(element.querySelector('.shared-ledger-book'), [{ transform: 'translateY(12px) rotate(-4deg)' }, { transform: 'rotate(-2deg)' }], 100, 700);
+          break;
       }
     }
 

@@ -8,6 +8,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '@/lib/site';
 import { createPageMetadata } from '@/lib/seo';
 import { generateAppSchema } from '@/lib/structured-data';
 import { JsonLd } from '@/components/json-ld';
+import { SharedLedgerIllustration } from '@/components/shared-ledger-illustration';
 
 export const metadata = createPageMetadata({ title: SITE_TITLE, description: SITE_DESCRIPTION, path: '/' });
 
@@ -126,7 +127,15 @@ export default function Home() {
 
       <section id="shared-finances" className="shared-section section-space" aria-labelledby="shared-title">
         <div className="site-shell">
-          <div className="section-heading heading-with-note"><div><h2 id="shared-title">Shared money.<br />A clearer record.</h2></div><p>Trips and households. Clubs and communities.<br />Dues and customer collections.</p></div>
+          <div className="shared-feature">
+            <div className="shared-feature-copy">
+              <h2 id="shared-title">Your people.<br />One shared ledger.</h2>
+              <p>Everyone brings their part. Cartera brings the records together.</p>
+              <p>Shared expenses, contributions, and recorded payments give trips, households, clubs, and communities a common financial record.</p>
+              <div className="shared-feature-summary"><Users size={23} strokeWidth={1.5} aria-hidden="true" /><span>Multiple members. Connected records.</span></div>
+            </div>
+            <SharedLedgerIllustration />
+          </div>
           <div className="shared-grid">
             <article><Handshake size={32} strokeWidth={1.3} aria-hidden="true" /><h3>Shared costs & settlements</h3><p>Shared expenses, equal or unequal shares, and recorded settlements show who paid and how balances stand.</p><div className="shared-example">Trips <span>·</span> Roommates <span>·</span> Shared groceries</div></article>
             <article><Users size={32} strokeWidth={1.3} aria-hidden="true" /><h3>Shared funds</h3><p>Contributions, expenses, and balances belong to one shared fund, with member access determined by group permissions.</p><div className="shared-example">Club funds <span>·</span> Events <span>·</span> Contributions</div></article>
