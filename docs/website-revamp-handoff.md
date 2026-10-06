@@ -1,6 +1,6 @@
 # Cartera website revamp
 
-The draft follows the approved ivory, forest-green, and notebook visual direction. It keeps the existing Next.js static-export architecture and Google Play download route. Deployment has not been performed.
+The draft follows the owner’s Monefy reference: pale mint, white, and soft-gray section backgrounds, forest-green accents, and readable sans-serif typography. Cartera’s books-and-pages mechanism and product-focused copy remain intact. It keeps the existing Next.js static-export architecture and Google Play download route. Deployment has not been performed.
 
 ## What changed
 
@@ -12,7 +12,7 @@ The draft follows the approved ivory, forest-green, and notebook visual directio
 - Added responsive navigation, keyboard focus and skip navigation, expandable FAQs, reduced-motion support, and contact validation.
 - The contact form opens a properly encoded email draft. It never claims a message was delivered. Visitors send it in their email app; a direct email link is also provided.
 - Kept blog and legal URLs and existing legal text. Updated metadata, sitemap, robots, blog canonicals, and structured-data URLs to https://cartera.yellowbytes.dev.
-- Used the existing app icon, an optimized real Analysis capture, locally hosted DM Sans and Fraunces fonts with OFL licenses, and a social preview.
+- Used the existing app icon, an optimized real Analysis capture, locally hosted Plus Jakarta Sans with its OFL license, and a social preview.
 
 ## Assets
 
@@ -20,7 +20,7 @@ The draft follows the approved ivory, forest-green, and notebook visual directio
 - public/screenshots/{books-and-pages-light,books-and-pages-dark,monthly-transactions-dark,monthly-transactions-light,spending-analysis,monthly-budget,trip-transactions}.webp: optimized copies of the seven owner-supplied screenshots in `/home/portonics/Documents/cartera screen shot/promo-3`. These replace the single hero capture in a swipeable carousel with navigation, pause/resume, and reduced-motion support.
 - public/screenshots/analysis.webp: optimized copy of the existing /tmp/planit-analysis-overview.png capture. Its matching UI hierarchy identifies media.uqab.cartera.dev; it shows USD analysis and no names, contacts, or account identifiers. This is a development-build capture, not verification of the current Play release. The owner should approve the dataset and confirm/replace it against the releasable build before publication.
 - The notebook, budget, and savings graphics are HTML/CSS explanations, labeled as illustrative examples, rather than app screenshots.
-- public/fonts/: Google Fonts Latin subsets and original OFL license files.
+- public/fonts/plus-jakarta-sans-latin.woff2: the Google Fonts Latin variable subset (400–800), with Plus-Jakarta-Sans-OFL.txt. Earlier font assets are retained but no longer loaded by the site.
 - public/social-preview.png: 1200 × 630 brand preview with no ratings or review claims.
 - docs/previews/cartera-desktop.png and cartera-mobile.png: screenshots of the running draft.
 

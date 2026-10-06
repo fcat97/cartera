@@ -64,7 +64,7 @@ Preserve /blogs, /privacy-policy, and /terms-and-conditions, or provide correct 
 ## Brand Commitments
 
 - The public name is Cartera; the Play listing identifies it as “Cartera: Expense Tracker.” PlanIt is an internal Android-project name.
-- Preserve the actual app icon and the approved financial-notebook identity.
+- Preserve the actual app icon and the financial-notebook product mechanism. The owner’s Monefy reference supersedes the earlier ivory-and-serif styling: use pale mint, white, soft gray, dark green accents, clean sans-serif typography, and comfortable reading sizes.
 - Use direct, practical, understandable language tied to real everyday uses.
 - Marketing copy describes Cartera’s capabilities and benefits in declarative language. Product sections describe the offering rather than instructing visitors or listing prohibitions. Buttons and essential form feedback retain clear action wording.
 - Avoid unsupported superlatives, invented proof, blanket free/unlimited claims, or promises that records can never be lost.
